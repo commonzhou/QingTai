@@ -1,0 +1,87 @@
+<!DOCTYPE>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>登录注册</title>
+  <script src="scripts/jquery.js"></script>                  <!--jquery为1.7版本 -->
+  <script src="scripts/jquery.validate.js"></script>
+  <script src="scripts/jquery.metadata.js"></script>
+  <link type="text/css" rel="stylesheet" href="styles/forms.css" />
+  </head>
+  <body>
+      <div id="frame">
+      
+      <header id="title" >青苔工作室</header>
+        
+        <div class="navs-slider">
+           <a href="#registerForm"  id="register">注册</a>
+           <a href="#loginForm" id="login" >登录</a>
+         
+        </div>
+     <form id="registerForm" class="form" action="#" method="post">  
+         <fieldset>
+         <p>
+           <label for="username">帐号</label>
+           <input type="text" id="username" name="username" size="25" placeholder="请输入用户名" required /> <!--size     定义输入字段的宽度。-->
+         </p> 
+         <p>
+           <label for="password">密码</label>
+           <input type="password" id="password" name="password" size="25" placeholder="请输入密码"  required />
+         </p>
+         <p>
+           <input type="submit" value="注册" />
+         </p>
+         </fieldset>
+    </form>   
+    <form id="loginForm" class="form" action="#" method="post">
+         <fieldset>
+         <p>
+           <label for="username">帐号</label>
+           <input type="text" id="username" name="username" size="25" placeholder="请输入用户名" required /><!--size     定义输入字段的宽度。-->
+         </p> 
+         <p>
+           <label for="password">密码</label>
+           <input type="password" id="password" name="password" size="25" placeholder="请输入密码" required />
+         </p>
+         <p>
+           <input type="submit"  value="登录" />
+            <a href="#" class="forgot_pass" id="find_password">忘记密码</a>
+         </p>
+         </fieldset>
+     </form>  
+     </div> 
+     
+     
+     <script type="text/javascript">
+        $(function(){
+          
+          $("#register").click(function(){
+              $("#registerForm").show();
+              $("#loginForm").hide();
+              $("#find_password").hide();
+          });
+          $("#login").click(function(){
+              $("#registerForm").hide();
+              $("#loginForm").show();
+              $("#find_password").show();
+          }); 
+          $("#register").trigger("click");
+         // textChange($("input.placeholder"));
+        });
+        /*function textChange(input){
+          var original=input.val();
+          input.focus(function(){
+             if($.trim(input.val())==original){
+                input.val("");
+             }
+          }).blur(function(){
+             if($.trim(input.val())==""){
+                input.val(original);
+             }
+          });
+        } */   
+    //本意是想做一个获取焦点和离焦时的效果，但是和placeolder属性似乎重复了，所以不起到作用
+     </script> 
+  </body>
+</html>
