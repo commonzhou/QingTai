@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>反馈信息处理</title>
+  
+  <link rel="stylesheet" type="text/css" href="styles/callback.css">
+  <link rel="stylesheet" type="text/css" href="styles/home.css">
+  </head>
+  <body>
+     <header>
+        	<h3>青苔可视化文档编辑器</h3>
+    </header>
+			<nav><!--导航链接-->
+				<ul>
+					<li><a href="home.html">首页</a></li>
+					<li><a href="edit.html">编辑区</a></li>
+					<li><a href="callback.html">反馈处理</a></li>
+					<li><a href="report.html">举报处理</a></li>
+				</ul>
+			</nav>
+    <!--江湖传说的手风琴样式，哈哈哈-->  
+    <div class="container">
+      <h3 class="heading-primary">反馈信息处理</h3>
+      <div class="accordion">
+        <dl>
+         <dt>
+          <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">用户甲</a>  
+         </dt>
+         <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
+         <p>
+            你们西安雾霾有点大
+         </p>
+         </dd>
+     <dt>
+          <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">用户乙</a>  
+         </dt>
+         <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
+         <p>
+            Time for a true display of skill~~
+         </p>
+         </dd>    
+    <dt>
+          <a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">用户丙</a>  
+         </dt>
+         <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
+         <p>
+            x>>ndsabhk<<???> hajf
+         </p>
+         </dd>          
+        </dl>
+      </div>
+    </div>
+  <script type="text/javascript">
+     	(function(){
+			var d = document,
+			accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+			setAria,
+			setAccordionAria,
+			switchAccordion,
+		  touchSupported = ('ontouchstart' in window),
+		  pointerSupported = ('pointerdown' in window);
+		  
+		  skipClickDelay = function(e){
+		    e.preventDefault();
+		    e.target.click();
+		  }
+
+				setAriaAttr = function(el, ariaType, newProperty){
+				el.setAttribute(ariaType, newProperty);
+			};
+			setAccordionAria = function(el1, el2, expanded){
+				switch(expanded) {
+		      case "true":
+		      	setAriaAttr(el1, 'aria-expanded', 'true');
+		      	setAriaAttr(el2, 'aria-hidden', 'false');
+		      	break;
+		      case "false":
+		      	setAriaAttr(el1, 'aria-expanded', 'false');
+		      	setAriaAttr(el2, 'aria-hidden', 'true');
+		      	break;
+		      default:
+						break;
+				}
+			};
+		//function
+		switchAccordion = function(e) {
+		  console.log("triggered");
+			e.preventDefault();
+			var thisAnswer = e.target.parentNode.nextElementSibling;
+			var thisQuestion = e.target;
+			if(thisAnswer.classList.contains('is-collapsed')) {
+				setAccordionAria(thisQuestion, thisAnswer, 'true');
+			} else {
+				setAccordionAria(thisQuestion, thisAnswer, 'false');
+			}
+		  	thisQuestion.classList.toggle('is-collapsed');
+		  	thisQuestion.classList.toggle('is-expanded');
+				thisAnswer.classList.toggle('is-collapsed');
+				thisAnswer.classList.toggle('is-expanded');
+		  	thisAnswer.classList.toggle('animateIn');
+			};
+      var len=accordionToggles.length;
+			for (var i=0;i<len; i++) {
+				if(touchSupported) {
+		      accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+		    }
+		    if(pointerSupported){
+		      accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+		    }
+		    accordionToggles[i].addEventListener('click', switchAccordion, false);
+		  }
+		})();
+  </script>
+  </body>
+</html>
