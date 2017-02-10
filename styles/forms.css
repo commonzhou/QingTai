@@ -2,7 +2,7 @@ body{
 background:url(../images/bg.jpg) no-repeat center top #310b28;
 }
 #frame {
-	width: 600px;
+	width: 800px;
   height:250px;
 	margin: 90px auto;
    background:url(../images/login_bg.png) no-repeat center top;
@@ -15,7 +15,7 @@ font-weight:normal;
 padding:15px 0 5px 20px;
 margin:0px;
 clear:both;
-text-align:center;
+text-align:center ;
 }
 fieldset{
 border:none;
@@ -24,3 +24,4 @@ clear:both;
 .form{
 
 }
+em{font-weight: bold;padding-right: 1em;vertical-align: top;color:red;}
