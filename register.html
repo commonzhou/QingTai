@@ -7,9 +7,8 @@
   <script src="scripts/jquery.js" type="text/javascript"></script>                  <!--jquery为1.7版本 -->
   <script src="scripts/validation/jquery.validate.js" type="text/javascript"></script>
   <script src="scripts/validation/jquery.metadata.js" type="text/javascript"></script>
-   <script src="scripts/validation/register.js" type="text/javascript">
-       //不知何处合适，反正放在后面妥当
-     </script>   
+  <script src="scripts/validation/register.js" type="text/javascript"> </script>  
+  <script src="scripts/validation/login.js" type="text/javascript"></script> 
   <link type="text/css" rel="stylesheet" href="styles/forms.css" />
   </head>
   <body>
@@ -88,45 +87,7 @@
           });
         } */   
     //本意是想做一个获取焦点和离焦时的效果，但是和placeholder属性似乎重复了，所以不起到作用，惜哉
-$.validator.addMethod('vPhone', function(value, element, params){//添加一个手机验证方法
-            var patten = /^0?(13|14|15|18)[0-9]{9}$/;
-            if (params && patten.test(value)) {
-                return true;
-            } else {
-                return false;
-            }
-          })
-    $("#registerForm").validate({
-                rules: { //配置规则
-                    username: {
-                        required: true,
-                        vPhone: true,
-                    },
-                    password: {
-                        required: true,
-                        minlength: 6
-                    }
-                },
-                messages: { //配置提示信息
-                    username: {
-                        required: "请输入手机号",
-                        vPhone: "输入的手机格式不正确",
-                        //remote: "手机号码已经注册过"
-                    },
-                  
-                    password: {
-                        required: "请输入密码",
-                        minlength: $.validator.format("密码不能小于{0}个字符")
-                    }
-                },
-                errorElement:"em",
-                success:function(label){                //似乎没有什么用处。。。
-                   label.text(" ").addClass("success");
-
-                }
-                
-          }); 
-    $("#loginForm").validate({
+   /* $("#loginForm").validate({
        rules:{
           username:{
             required:true,
@@ -149,7 +110,7 @@ $.validator.addMethod('vPhone', function(value, element, params){//添加一个�
        },
        errorElement:"em",
 
-    });
+    });*/
       
         });
      </script>            
