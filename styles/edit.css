@@ -9,6 +9,9 @@ article{
 	color:#223;
 	background-color:#e0ffff;
 	border-color: #667;
+  max-width: 960px;
+  margin: 2em auto;
+  padding: 2em 0 2em 0;
 }
 
 .target{
