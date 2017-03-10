@@ -546,7 +546,7 @@
 	color: #222222;
 	height: 24px;
 	overflow: hidden;
-	cursor:pointer;
+	cursor: pointer;
 }
 .ke-menu-item-on {
 	border: 1px solid #5690D2;
@@ -862,13 +862,12 @@
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	*height: 25px;
 }
 .ke-upload-area .ke-upload-file {
 	position: absolute;
-	font-size: 60px;
 	top: 0;
 	right: 0;
+	height: 25px;
 	padding: 0;
 	margin: 0;
 	z-index: 811212;
