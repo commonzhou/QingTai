@@ -1,109 +1,79 @@
 <!DOCTYPE>
 <html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="PSPad editor, www.pspad.com">
-  <title>编辑器</title>
-  <link rel="stylesheet" type="text/css" href="styles/home.css">
-  <link rel="stylesheet" type="text/css" href="styles/edit.css">
-  <script charset="utf-8" src="scripts/kindeditor/kindeditor-min.js"></script>
-  <script charset="utf-8" src="scripts/lang/zh_CN.js"></script>
-  </head>
-  <body>
-     <body>
-		<header>
-        	<h3>青苔可视化文档编辑器</h3>
-    </header>
-			<nav><!--导航链接-->
-				<ul>
-					<li><a href="home.html">首页</a></li>
-		  			<li><a href="edit.html">推送</a></li>
-                    <li><a href="home.html">系统消息</a></li>
-		 			<li><a href="callback.html">反馈</a></li>
-					<li><a href="report.html">举报</a></li>
-				</ul>
-			</nav>  
-        <article class="article">
-			<div class="target">
-      <br />
-		    	<form>
-		    	  <input id="textEditorTitle" type="text" style="width:800px;height:40px" maxlength="30" data-limit="30" value="" name="title" placeholder="请输入标题">		    
-		    	  <input id="textEditorAuthor" type="text" style="width:800px;height:40px" maxlength="30" data-limit="30" value="" name="title" placeholder="请输入作者">
-		    	</form>
-		  </div>
-		    	<form class="text-editor">
-			     <textarea name="content" style="width: 800px; height: 400px;">请输入正文。。。</textarea>
-         <p>选择推送位置</p>
-       
-           <label name="bankuai">版块</label>
-           <span class="tuiSong">
-           <select >
-             <option value="help">求助</option>
-             <option value="question">提问</option>
-             <option value="comment">评论</option>
-           </select>
-           </span>
-           <label name="bankuai">张数</label>
-           <span class="tuiSong">
-           <select >
-             <option value="1">1</option>
-             <option value="2">2</option>
-             <option value="3">3</option>
-           </select>
-           </span>
-           <label name="bankuai">性别</label>
-           <span class="tuiSong">
-           <select >
-             <option value="male">男</option>
-             <option value="female">女</option>
-             <option value="secret">保密</option>
-           </select>
-           </span>
-         
-  			<p class="form-p">
-				 <span class="form-span">
-				   <button id="submitBtn"  class="btn" onmouseover="this.className='input_move'" onmouseout="this.className='input_out'" type="submit" tabindex="6">群    发</button>
-			       <button id="previewBtn"  class="btn" onmouseover="this.className='input_move'" onmouseout="this.className='input_out'" type="submit" tabindex="6">预    览</button>
-				 
-				 </span>
-				  </p>
-		  </form>
-		  </article>
-      <script>
-			var editor;
-			KindEditor.ready(function(K) {
-				editor = K.create('textarea[name="content"]', {
-					allowFileManager : true
-				});
-				K('input[name=getHtml]').click(function(e) {
-					alert(editor.html());
-				});
-				K('input[name=isEmpty]').click(function(e) {
-					alert(editor.isEmpty());
-				});
-				K('input[name=getText]').click(function(e) {
-					alert(editor.text());
-				});
-				K('input[name=selectedHtml]').click(function(e) {
-					alert(editor.selectedHtml());
-				});
-				K('input[name=setHtml]').click(function(e) {
-					editor.html('<h3>Hello KindEditor</h3>');
-				});
-				K('input[name=setText]').click(function(e) {
-					editor.text('<h3>Hello KindEditor</h3>');
-				});
-				K('input[name=insertHtml]').click(function(e) {
-					editor.insertHtml('<strong>插入HTML</strong>');
-				});
-				K('input[name=appendHtml]').click(function(e) {
-					editor.appendHtml('<strong>添加HTML</strong>');
-				});
-				K('input[name=clear]').click(function(e) {
-					editor.html('');
-				});
-			});
-		</script>
-	</body>
-</html>
 
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="generator" content="PSPad editor, www.pspad.com">
+	<title>编辑器</title>
+	<link rel="stylesheet" type="text/css" href="styles/home.css">
+	<link rel="stylesheet" type="text/css" href="styles/edit.css">
+	<script charset="utf-8" src="scripts/kindeditor/kindeditor-min.js"></script>
+	<script charset="utf-8" src="scripts/lang/zh_CN.js"></script>
+</head>
+
+<body>
+	<!--导航链接-->
+	<nav>
+		<ul>
+			<li><a href="home.html">首页</a></li>
+			<li><a href="user.html">用户分析</a></li>
+			<li><a href="edit.html" class="edit">系统消息</a></li>
+			<li><a href="report.html">举报</a></li>
+			<li><a href="callback.html">反馈</a></li>
+		</ul>
+	</nav> 
+		<div class="bg">
+			<article class="article">
+				<div class="target">
+					<form class="text-editor">
+						<div class="message"></div>
+						<!--<textarea name="content" style="width: 800px; height: 400px;">请输入正文。。。</textarea>-->
+						<p class="form-p">
+							<span class="form-span">
+								<button id="submitBtn"  class="btn" onmouseover="this.className='input_move'" onmouseout="this.className='input_out'" type="submit" tabindex="6">发送</button>
+					<!--<button id="previewBtn"  class="btn" onmouseover="this.className='input_move'" onmouseout="this.className='input_out'" type="submit" tabindex="6">预    览</button>-->
+							</span>
+						</p>
+					</form>
+				</div>
+	</article>
+		</div>
+	
+	<script>
+		var editor;
+		KindEditor.ready(function (K) {
+			editor = K.create('textarea[name="content"]', {
+				allowFileManager: true
+			});
+			K('input[name=getHtml]').click(function (e) {
+				alert(editor.html());
+			});
+			K('input[name=isEmpty]').click(function (e) {
+				alert(editor.isEmpty());
+			});
+			K('input[name=getText]').click(function (e) {
+				alert(editor.text());
+			});
+			K('input[name=selectedHtml]').click(function (e) {
+				alert(editor.selectedHtml());
+			});
+			K('input[name=setHtml]').click(function (e) {
+				editor.html('<h3>Hello KindEditor</h3>');
+			});
+			K('input[name=setText]').click(function (e) {
+				editor.text('<h3>Hello KindEditor</h3>');
+			});
+			K('input[name=insertHtml]').click(function (e) {
+				editor.insertHtml('<strong>插入HTML</strong>');
+			});
+			K('input[name=appendHtml]').click(function (e) {
+				editor.appendHtml('<strong>添加HTML</strong>');
+			});
+			K('input[name=clear]').click(function (e) {
+				editor.html('');
+			});
+		});
+	</script>
+</body>
+
+</html>

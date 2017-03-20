@@ -1,103 +1,62 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
+
+<head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="generator" content="PSPad editor, www.pspad.com">
   <title>反馈信息处理</title>
   <link rel="stylesheet" type="text/css" href="styles/home.css">
   <link rel="stylesheet" type="text/css" href="styles/report.css">
+  <!--<script charset="utf-8" src="scripts/jquery.js"></script>-->
   
-  </head>
-  <body>
-     <header>
-        	<h3>青苔可视化文档编辑器</h3>
-    </header>
-			<nav><!--导航链接-->
-				<ul>
-					<li><a href="home.html">首页</a></li>
-					<li><a href="edit.html">推送</a></li>
-          <li><a href="home.html">系统消息</a></li>
-					<li><a href="callback.html">反馈</a></li>
-					<li><a href="report.html">举报</a></li>
-				</ul>
-			</nav>
-    <div id="container">
-      <div id="title">
-        <ul class="content">
-          <li >举报用户</li>
-          <li >被举报用户</li>
-          <li >举报类型</li>
-          <li >举报内容</li>
-          <li >举报时间</li>
-          <li >操作</li>
-        </ul>
-      </div>
-      <br />
-      <div class="item">
-        <ul class="content">
-          <li>用户白羊</li>
-          <li>用户狮子</li>
-          <li> 帖   子</li>
-          <li>啦啦啦啦卡卡卡卡卡</li>
-          <li>2017.2.16</li>
-          <li>
+
+</head>
+
+<body>
+  <nav>
+    <!--导航链接-->
+    <ul>
+      <li><a href="home.html">主页</a></li>
+      <li><a href="home.html">用户分析</a></li>
+      <li><a href="edit.html">系统消息</a></li>
+      <li><a class="report" href="report.html">举报</a></li>
+      <li><a href="callback.html">反馈</a></li>
+    </ul>
+  </nav>
+  <div class="bg" id="container">
+    <div class="bg_02">
+      <ul class="content">
+        <li class="li_01">举报用户</li>
+        <li class="li_02">被举报用户</li>
+        <li class="li_03">举报类型</li>
+        <li class="li_04">举报原因</li>
+        <li class="li_05">举报内容</li>
+        <li class="li_06">举报时间</li>
+        <li class="li_07">操作</li>
+      </ul>
+      <ul id="content_new" class="content_new">
+        <!--<li><div><img src="images/bg.jpg"></div>
+            <div><img src="images/bg.jpg"></div> 
+            <div>帖子 </div>
+            <div>色情 </div>
+            <div>啦啦啦啦卡卡卡卡卡 </div>
+            <div>2017.2.16</div>
+            <div>
             <select>
-              <option selected="selected">警告</option>
-              <option>黑屋十旬</option>
-              <option>永不录用</option>
+              <option selected="selected">不处理</option>
+              <option>警告</option>
+              <option>禁言一天</option>
+              <option>禁言一周</option>
+              <option>禁言一天</option>
+              <option>封号</option>
             </select>
-          </li>
-        </ul>
-      </div>
-       <div class="item">
-        <ul class="content">
-          <li>用户双鱼</li>
-          <li>用户双鱼</li>
-          <li> 帖   子</li>
-          <li>啦啦啦啦卡卡卡卡卡</li>
-          <li>2017.2.16</li>
-          <li>
-            <select>
-              <option selected="selected">警告</option>
-              <option>黑屋十旬</option>
-              <option>永不录用</option>
-            </select>
-          </li>
-        </ul>
-      </div>
-       <div class="item">
-        <ul class="content">
-          <li>用户摩羯</li>
-          <li>用户天蝎</li>
-          <li> 帖   子</li>
-          <li>啦啦啦啦卡卡卡卡卡</li>
-          <li>2017.2.16</li>
-          <li>
-            <select>
-              <option selected="selected">警告</option>
-              <option>黑屋十旬</option>
-              <option>永不录用</option>
-            </select>
-          </li>
-        </ul>
-      </div>
-       <div class="item">
-        <ul class="content">
-          <li>用户天秤</li>
-          <li>用户双鱼</li>
-          <li> 帖   子</li>
-          <li>啦啦啦啦卡卡卡卡卡</li>
-          <li>2017.2.16</li>
-          <li>
-            <select>
-              <option selected="selected">警告</option>
-              <option>黑屋十旬</option>
-              <option>永不录用</option>
-            </select>
-          </li>
-        </ul>
-      </div>
-      
+            &nbsp;&nbsp;
+            <button id="btn_sure">确定</button></div>
+        </li>-->
+      </ul>
     </div>
-  </body>
+  </div>
+  <script charset="utf-8" src="scripts/report.js"></script>
+</body>
+
 </html>

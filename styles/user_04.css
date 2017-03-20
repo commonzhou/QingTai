@@ -1,0 +1,15 @@
+div.bg div.choice ul li.user_04{
+    background: #59C8F2 ;
+}
+div.bg div.choice ul li.user_04 a{
+    color: #fff;
+}
+
+div.bg div.search{
+    height: 43.5rem;
+    width: 101rem;
+    background: #fff;
+    position: absolute;
+    left: 31.9rem;
+    bottom: 7rem;
+}

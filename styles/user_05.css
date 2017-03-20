@@ -1,0 +1,31 @@
+div.bg div.choice ul li.user_05{
+    background: #59C8F2 ;
+}
+div.bg div.choice ul li.user_05 a{
+    color: #fff;
+}
+
+div.bg div.map{
+    height: 43.5rem;
+    width: 53.3rem;
+    background: #fff;
+    position: absolute;
+    left: 31.9rem;
+    bottom: 7rem;
+}
+div.bg div.study{
+    height: 25.6rem;
+    width: 44.3rem;
+    background: #fff;
+    position: absolute;
+    left: 88.3rem;
+    bottom: 24.9rem;
+}
+div.bg div.sex{
+    height: 15rem;
+    width: 44.3rem;
+    background: #fff;
+    position: absolute;
+    left: 88.3rem;
+    bottom: 7rem;
+}

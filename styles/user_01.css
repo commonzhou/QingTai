@@ -1,0 +1,15 @@
+div.bg div.choice ul li:first-child{
+    background: #59C8F2;
+}
+div.bg div.choice ul li.user_01 a{
+    color: #fff;
+}
+
+div.bg div.num{
+    height: 43.5rem;
+    width: 101rem;
+    background: #fff;
+    position: absolute;
+    left: 31.9rem;
+    bottom: 7rem;
+}

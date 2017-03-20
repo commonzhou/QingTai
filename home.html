@@ -5,22 +5,85 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>青苔可视化编辑器</title>
 		<meta name="author" content="administer" />
+		<meta name="viewport" content="user-scalable=1,width=device-width">
+		<style>
+			nav ul li a.home{
+				color: #4EC4F1; 
+			}
+		</style>
 		<link rel="stylesheet" type="text/css" href="styles/home.css">
 		<!-- Date: 2017-01-5 -->
+		
 	</head>
 	<body>
-    <header>
-        	<h3>青苔可视化文档编辑器</h3>
-    </header>
-			<nav><!--导航链接-->
-				<ul>
-					<li><a href="home.html">首页</a></li>
-					<li><a href="edit.html">推送</a></li>
-                    <li><a href="home.html">系统消息</a></li>
-					<li><a href="callback.html">反馈</a></li>
-					<li><a href="report.html">举报</a></li>
-				</ul>
-			</nav>  
+		<nav><!--导航链接-->
+			<ul>
+				<li><a href="home.html" class="home">主页</a></li>
+				<li><a href="user.html">用户分析</a></li>
+				<li><a href="edit.html">系统消息</a></li>
+				<li><a href="report.html">举报</a></li>
+				<li><a href="callback.html">反馈</a></li>
+			</ul>
+		</nav>  
+		<div class="bg">
+			
+			<div class="help">
+				<div id="title">
+					使用帮助
+				</div>
+				<div id="content">
+					一、帮助使用帮助使用帮助使使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使使用帮助使用帮助
+                    <br /> <br />
+                    二、助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助
+                    <br /> <br />
+                    三、使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用帮助使用
+				</div>	
+             </div> 
+            <div class="user">
+            	<div id="graph1">
+            	</div>
+            	<div id="toolbox">
+            		<div id="choseNum">
+            			数据范围
+            		</div>
+            		<div id="month">
+            			月
+            		</div>
+            		<div id="week">
+            			周
+            		</div>
+            		<div id="date">
+            			日
+            		</div>
+            		<div id="choseDate">
+            			指定日期查询
+            		</div>
+            		
+            		<div id="year" class="queryDate">
+            			<input type="text" placeholder="2017">
+            		</div>
+            		<div id="nian" class="queryDate">年
+            		</div>
+            		<div id="mon" class="queryDate">
+            			<input type="text" placeholder="7">
+            		</div>
+            		<div id="yue" class="queryDate">月
+            		</div>
+            		<div id="day" class="queryDate">
+            			<input type="text" placeholder="23">
+            		</div>
+            		<div id="ri" class="queryDate">日
+            		</div>
+            		
+            		<div id="query">
+            			查询
+            		</div>
+            	</div>
+			</div> 
+			
+		</div>
+		<script src="scripts/echarts/echarts.js"></script>
+        <script src="scripts/echarts/homegraph.js"></script>
 	</body>
 </html>
 
