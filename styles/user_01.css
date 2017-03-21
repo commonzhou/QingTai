@@ -13,3 +13,70 @@ div.bg div.num{
     left: 31.9rem;
     bottom: 7rem;
 }
+
+div.bg div.num div#graph2{
+   
+    width:101rem;
+    height:43.5rem;
+    margin:0;
+}
+/*div.bg div.num div#toolbox{
+    float:left;
+    width:24.6rem;
+    height:43.5rem;
+    margin:0 0 0 0;
+    position: relative;
+}*/
+div.bg div.num div#toolbox div#choseNum{
+    position: absolute;
+    width:6.4rem;
+    height:2.2rem;
+    font-family: PingFangSC-Regular;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #B8B0B0;
+    top:21.5rem; 
+    left:80.1rem;                   /*由于无法按UI的对齐，有改正*/  
+}
+
+div.bg div.num div#toolbox div#month{
+    position: absolute;
+    width:2.4rem;
+    height:2.4rem;
+    background-color: #4EC4F1;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 2.2rem;
+    top:24.3rem; 
+    left:80.1rem;   
+    padding:0.1rem 0.4rem;
+}
+
+div.bg div.num div#toolbox div#week{
+    position: absolute;
+    width:2.4rem;
+    height:2.4rem;
+    background-color: #FFFFFF;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #807D7D;
+    line-height: 2.2rem;
+    top:24.3rem;   
+    left:83.7rem;
+    padding:0.1rem 0.4rem;
+}
+
+div.bg div.num div#toolbox div#date{
+    position: absolute;
+    width:2.4rem;
+    height:2.4rem;
+    background-color: #FFFFFF;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #807D7D;
+    line-height: 2.2rem;
+    top:24.3rem;   
+    left:87.3rem;
+    padding:0.1rem 0.4rem;
+}
