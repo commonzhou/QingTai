@@ -37,3 +37,21 @@ div.bg div.study div#graph5{
     height: 25.6rem;
     width: 44.3rem;
 }
+div.bg div.sex div#graph6{
+    height: 15.0rem;
+    width: 44.3rem;
+}
+div.bg div.sex div#subTitle{
+    width:12.9rem;
+    height:2rem;
+    position: absolute;
+    left:23.2rem;
+    top: 1.3rem;
+    bottom:11.7rem;
+    font-family: PingFangSC-Regular;
+    font-size:1.4rem;
+    color: #0082D2;
+    line-height: 2rem;
+
+}
+
