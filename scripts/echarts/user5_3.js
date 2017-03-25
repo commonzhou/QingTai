@@ -1,7 +1,8 @@
 var dom = document.getElementById("graph6");
 var myChart = echarts.init(dom);
 var option = null;
-var data=[798,898];
+var man=798;
+var woman=898;
 var xMax=1000;
 option = {
     title:{
@@ -88,13 +89,13 @@ option = {
 	        },
             data:[
 	            {
-                    value:898,
+                    value:woman,
                     itemStyle:{
                         normal:{color:'#DF2938',
                         barBorderRadius: 5}
                     }
                },{
-                    value:798,
+                    value:man,
                     itemStyle:{
                         normal:{color:'#0082D2',
                         barBorderRadius: 5}
@@ -143,3 +144,21 @@ option = {
     ]
 };
  myChart.setOption(option, true);    
+ //218是grid的长度，对应坐标长度1000，算出相应男女人数对应的距离长度，来定位两个圆形
+ var manpos=man*21.8/1000+4.7-1.6;
+ var womanpos=woman*21.8/1000+4.7-1.6;
+ var circledis=0.535;                                //两圆半径之差
+ var manpos2=manpos+circledis;
+ var womanpos2=womanpos+circledis;
+ var man1=document.getElementById("man1");
+ man1.style.top=7.38+"rem";
+ man1.style.left=manpos+"rem";
+ var man1=document.getElementById("man2");
+ man2.style.top=7.91+"rem";
+ man2.style.left=manpos2+"rem";
+ var man1=document.getElementById("woman1");
+ woman1.style.top=9.8+"rem";                           //此处又没有按照UI，阿弥陀佛
+ woman1.style.left=womanpos+"rem";
+ var man1=document.getElementById("woman2");
+ woman2.style.top=10.3+"rem";
+ woman2.style.left=womanpos2+"rem";

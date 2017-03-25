@@ -52,6 +52,19 @@ div.bg div.sex div#subTitle{
     font-size:1.4rem;
     color: #0082D2;
     line-height: 2rem;
-
+}
+div.bg div.sex div.outcircle{
+    position: absolute;
+    width:1.84rem;
+    height:1.84rem;
+    background: #2D96B3;
+    border-radius: 1.84rem;
+}
+div.bg div.sex div.innercircle{
+    width:0.77rem;
+    height:0.77rem;
+    position: absolute;
+    background: #FFFFFF;
+    border-radius: 0.77rem;
 }
 
