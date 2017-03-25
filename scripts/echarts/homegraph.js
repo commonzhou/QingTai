@@ -79,22 +79,21 @@ var myChart=echarts.init(main);
    	 type:"line",
      symbol:"circle",
      symbolSize:12,
-   	 data:[1200,1400,1500,1300,1700,2200]
+   	 data:[0,600,1500,2220,1600,533]
    },
    {
    	 name:"启动次数",
    	 type:"line",
      symbol:"circle",
      symbolSize:12,
-     
-   	 data:[0,400,800,666,222,333]
+  	 data:[0,600,1500,2220,1600,533]
    },
    {
    	 name:"活跃用户",
    	 type:"line",
      symbol:"circle",
      symbolSize:12,
-   	 data:[2100,2300,2200,2300,2500,2222]
+   	 data:[0,600,1500,2220,1600,533]
    }
 
    ]
