@@ -1,3 +1,10 @@
+@media screen and(min-device-width:160rem){
+   body{
+    height: 62.8rem;
+    width: 136.6rem;
+    margin: 0 auto;
+}
+}
 div.bg div.choice ul li.user_02{
     background: #59C8F2 ;
 }
@@ -132,6 +139,7 @@ div.bg div.top ul#content li.content ul li.label2{
     text-align: center;
     padding:0.08rem 0 0.08rem 0;
 }
+
 div.bg div.top ul#content li.content ul li.name{
     width:18.7rem;
     height:2.2rem;

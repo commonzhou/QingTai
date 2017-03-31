@@ -1,10 +1,13 @@
 *{
     padding: 0;
     margin: 0;
+    border:0;
     box-sizing: border-box;
+    font-size: 9px;
+    font-family:PingFangSC-Regular;
 }
-html{
-    font-size: 62.5%                 /*rem与px10倍关系*/
+html{  
+    font-size: 111.11%;                 /*rem与px10倍关系*/
 }
 body{
     height: 62.8rem;
@@ -77,11 +80,18 @@ div.bg div.help div#content{
     height: 36.7rem;
     width: 22.6rem;
     font-family: PingFangSC-Regular;
-    font-size: 1.4rem;
-    color: #5C5858;
+    font-size: 1.3rem;                      /*兼容性修改了UI*/
+    color: #5C5858; 
     line-height: 2.3rem;
     margin:1.5rem 2rem 1.5rem 2rem;
 }
+
+@media screen and (min-device-width:1600px){              /*此处为响应式设计理念，但是IE和chrome表现差异太大，未遂*/
+    div.bg div.help div#content{
+       font-size: 1.3rem;     
+    }
+}
+
 /**********first graph****************/
 div.bg div.user div#graph1{
     float:left;
@@ -172,15 +182,17 @@ div.bg div.user .queryDate{
     position: absolute;
     background-color: #FFFFFF;
     font-family: PingFangSC-Regular;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #807D7D;
     line-height: 2.2rem;
-    top:25.4rem;   
+    top:25.4rem;
+
 }
 div.bg div.user div#toolbox div#year input{
     width:6rem;
     height:3.1rem;
     padding:0.6rem 1.8rem 0.3rem 0.7rem;
+    font-size: 1.6rem;                             //input里面的字体大小设置。。
 }
 div.bg div.user div#toolbox div#nian{
     width:1.6rem;
@@ -192,7 +204,7 @@ div.bg div.user div#toolbox div#mon input{
     width:3.5rem;
     height:3.1rem;
     padding:0.6rem 0.9rem 0.3rem 0.7rem;
-   
+    font-size: 1.6rem;
 }
 div.bg div.user div#toolbox div#mon{
      left:8.4rem;
@@ -207,7 +219,7 @@ div.bg div.user div#toolbox div#day input{
     width:4.6rem;
     height:3.1rem;
     padding:0.6rem 1.7rem 0.3rem 0.9rem;
-   
+    font-size: 1.6rem;
 }
 div.bg div.user div#toolbox div#day{
      left:14rem;

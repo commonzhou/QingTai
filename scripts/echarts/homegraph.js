@@ -17,7 +17,7 @@ var myChart=echarts.init(main);
     inactiveColor:"#B8B0B0",
     orient:'vertical',
     left:62,
-    top:32
+    top:22                           //兼容性修改了UI
     
 },
    grid:{
@@ -98,5 +98,11 @@ var myChart=echarts.init(main);
 
    ]
 };
+   
+if(screen.width>1600){                                //响应式布局理念，针对1920*1080显示器的改正
+  option.grid.height=350;
+  option.grid.width=700;
+}
 // 使用刚指定的配置项和数据显示图表。
+
 myChart.setOption(option);           

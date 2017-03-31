@@ -47,7 +47,7 @@ div.bg div.search ul li{
     opacity: 0.59;
     background: #0C84FC;
     font-family: PingFangSC-Medium;
-    font-size: 1.3rem;
+    font-size: 1.5rem;                               /*不得已啊，不改字实在太小*/
     line-height: 1.8rem;
     color: #FFFFFF;
     text-align: center;
