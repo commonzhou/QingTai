@@ -99,10 +99,25 @@ var myChart=echarts.init(main);
    ]
 };
    
+if(window.navigator.userAgent.indexOf("Chrome") !== -1){   //针对chrome 12px最小字体的问题
+    if(screen.width==1366){
+       option.grid.height=350;
+       option.grid.width=700;     
+    }
+    if(screen.width==1536){
+       option.grid.height=350;
+       option.grid.width=680;     
+    }
+     if(screen.width==1477){
+       option.grid.height=370;
+       option.grid.width=700;     
+    }
+}
 if(screen.width>1600){                                //响应式布局理念，针对1920*1080显示器的改正
   option.grid.height=350;
   option.grid.width=700;
 }
+
 // 使用刚指定的配置项和数据显示图表。
 
 myChart.setOption(option);           

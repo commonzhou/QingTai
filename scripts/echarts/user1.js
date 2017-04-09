@@ -123,6 +123,19 @@ document.getElementById("month").style.left=distance+"px";
 document.getElementById("week").style.left=distance+36+"px";
 document.getElementById("date").style.left=distance+72+"px";
 }
+if(window.navigator.userAgent.indexOf("Chrome") !== -1){   //针对chrome 12px最小字体的问题
+    if(screen.width=1366){
+      option.grid.top=60;
+      option.legend.left=960;
+      var distance=option.legend.left;
+      distance=distance+2;
+
+      document.getElementById("choseNum").style.left=distance+"px";
+      document.getElementById("month").style.left=distance+"px";
+      document.getElementById("week").style.left=distance+36+"px";
+      document.getElementById("date").style.left=distance+72+"px";     
+    }
+}
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);   
 /////由于浏览器的字体大小问题，所以用这个先获取legend的left数值，再进行加减赋值给月周日的left

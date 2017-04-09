@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*rem与px10倍关系*/
+/*html{
+    font-size: 62.5%                 
+}*/
+body{
+    height: 6.28rem;
+    width: 13.66rem;
+    margin: 0 auto;
+}
+nav{
+    font-size: 0;
+    height:.93rem;
+    width: 13.66rem;
+    position: relative;
+}
+nav ul{
+    height: .28rem;
+    width: 6.35rem;
+    position: absolute;
+    right:1.57rem;
+    top: .49rem;
+    /*background: yellow;*/
+}
+nav ul li{
+    display: inline-block;
+    height: .28rem;
+    margin-left: .85rem;
+    padding: 0;
+}
+nav ul li:first-child{
+    margin-left:0;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #B8B0B0;
+    font-size: .2rem;
+}
+nav ul li a:hover{
+    color: #4EC4F1;
+}
+
+/**/
+div.bg{
+    height: 5.35rem;
+    width: 13.66rem;
+    background: #F0F1F3;
+    position: relative;
+}
+div.bg div.help{
+    height: 4.35rem;
+    width: 2.66rem;
+    background: #fff;
+    position: absolute;
+    left: .49rem;
+    bottom: .7rem;
+}
+div.bg div.user{
+    height: 4.35rem;
+    width: 9.8rem;
+    background: #fff;
+    position: absolute;
+    left: 3.49rem;
+    bottom: .7rem;
+}
+div.bg div.help div#title{
+    height: .25rem;
+    width: .72rem;
+    font-family: PingFangSC-Regular;
+    font-size: .18rem;                         /*rem与px不要混用。。*/
+    color: #7F7A7A;
+    margin: .13rem 1.82rem 0rem .12rem;
+}
+div.bg div.help div#content{
+    height: 3.67rem;
+    width: 2.26rem;
+    font-family: PingFangSC-Regular;
+    font-size: .14rem;
+    color: #5C5858;
+    line-height: .23rem;
+    margin: .15rem .2rem .15rem .2rem;
+}
+/**********first graph****************/
+div.bg div.user div#graph1{
+    float:left;
+    width:6.73rem;
+    height:4.35rem;
+    margin:0;
+}
+div.bg div.user div#toolbox{
+    float:left;
+    width: 2.72rem;
+    height: 4.35rem;
+    margin:0 0 0 .35rem;
+    position: relative;
+}
+div.bg div.user div#choseNum{
+    position: absolute;
+    width:.64rem;
+    height:.22rem;
+    font-family: PingFangSC-Regular;
+    font-size:.16rem;
+    line-height: .22rem;
+    color: #B8B0B0;
+    top:1.17rem;    
+}
+div.bg div.user div#choseDate{
+    position: absolute;
+    width:.96rem;
+    height:.22rem;
+    font-family: PingFangSC-Regular;
+    font-size: .16rem;
+    line-height: .22rem;
+    color: #B8B0B0;
+    top:2.13rem;    
+}
+div.bg div.user div#query{
+    position: absolute;
+    width:.8rem;
+    height:.32rem;
+    background-color: #1AC217;
+    border-radius: .04rem;
+    font-family: PingFangSC-Regular;
+    font-size: .14rem;
+    color: #FFFFFF;
+    line-height: .2rem;
+    top:3.04rem;   
+    left:.02rem;
+    padding:.06rem .26rem;
+}
+div.bg div.user div#month{
+    position: absolute;
+    width:.24rem;
+    height:.24rem;
+    background-color: #4EC4F1;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: .22rem;
+    top:1.45rem;   
+    padding:.01rem .04rem;
+}
+div.bg div.user div#week{
+    position: absolute;
+    width:.24rem;
+    height:.24rem;
+    background-color: #FFFFFF;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #807D7D;
+    line-height: .22rem;
+    top:1.45rem;   
+    left:.36rem;
+    padding:.01rem .04rem;
+}
+div.bg div.user div#date{
+    position: absolute;
+    width:.24rem;
+    height:.24rem;
+    background-color: #FFFFFF;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #807D7D;
+    line-height: .22rem;
+    top:1.45rem;   
+    left:.71rem;
+    padding:.01rem .04rem;
+}
+div.bg div.user .queryDate{
+    position: absolute;
+    background-color: #FFFFFF;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #807D7D;
+    line-height: .22rem;
+    top:2.54rem;   
+}
+div.bg div.user div#toolbox div#year input{
+    width:.6rem;
+    height:.31rem;
+    padding:.06rem .18rem .03rem .07rem;
+}
+div.bg div.user div#toolbox div#nian{
+    width:.16rem;
+    height:.22rem;
+    top:2.6rem;
+    left:.64rem;
+}
+div.bg div.user div#toolbox div#mon input{
+    width:.35rem;
+    height:.31rem;
+    padding:.06rem .09rem .03rem .07rem;
+   
+}
+div.bg div.user div#toolbox div#mon{
+     left:.84rem;
+} 
+div.bg div.user div#toolbox div#yue{
+    width:.16rem;
+    height:.22rem;
+    top:2.6rem;
+    left:1.21rem;
+}
+div.bg div.user div#toolbox div#day input{
+    width:.46rem;
+    height:.31rem;
+    padding:.06rem .17rem .03rem .09rem;
+   
+}
+div.bg div.user div#toolbox div#day{
+     left:1.4rem;
+} 
+div.bg div.user div#toolbox div#ri{
+    width:.16rem;
+    height:.22rem;
+    top:2.6rem;
+    left:.188rem;
+}
+
+
+
+

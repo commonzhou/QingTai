@@ -2,117 +2,129 @@ nav ul li a.report{
     color: #4EC4F1; 
 }
 div.bg_02{
-  height: 43.5rem;
-  width: 129.3rem;
+  height: 4.35rem;
+  width: 12.93rem;
   position: absolute;
-  left: 3.6rem;
-  bottom: 7.3rem;
+  left: .36rem;
+  bottom: .73rem;
   background: #fff;
 }
 div.bg_02 .content{
-  height: 4.55rem;
-  width: 129.3rem;
+  height: .455rem;
+  width: 12.93rem;
   font-size: 0;
   margin: 0 auto;
   border-bottom: 1px solid #DDD5D5;
 }
 .bg_02 .content li{
   list-style: none;
-  font-size: 1.6rem;
+  font-size: .16rem;
   display: inline-block;
-  height: 4rem;
-  line-height: 4rem;
+  height: .4rem;
+  line-height: .4rem;
   text-align: center;
   color: #747779;
 }
 .bg_02 .content li.li_01{
-  margin-left: 4rem;
+  margin-left: .4rem;
 }
 .bg_02 .content li.li_02{
-  margin-left: 5.2rem;
+  margin-left: .52rem;
 }
 .bg_02 .content li.li_03{
-  margin-left: 6.3rem;
+  margin-left: .63rem;
 }
 .bg_02 .content li.li_04{
-  margin-left: 6.6rem;
+  margin-left: .66rem;
 }
 .bg_02 .content li.li_05{
-  margin-left: 18.2rem;
+  margin-left: 1.82rem;
 }
 .bg_02 .content li.li_06{
-  margin-left: 17.6rem;
+  margin-left: 1.76rem;
 }
 .bg_02 .content li.li_07{
-  margin-left: 11rem;
+  margin-left: 1.1rem;
 }
 
 /*新建ul标签*/
 .bg_02 .content_new{
-  width: 129.2rem;
+  width: 12.92rem;
   /*margin: 0 auto;*/
 }
-#container .content_new li{
+.new_li{
   list-style: none;
   font-size: 0;
-  height: 7.1rem;
-  line-height: 7.1rem;
-  width: 129.2rem;
+  height: .71rem;
+  line-height: .71rem;
+  width: 12.92rem;
+  /*background: red;*/
   border-bottom: 1px solid #F3EFEF;
 }
-#container .content_new li div{
-  font-size: 1.4rem;
+.new_li div{
+  font-size: .14rem;
   color: #747779;
   display: inline-block;
   text-align: center;
 }
-#container .content_new li .div_01{
-  margin-left: 4.5rem;
-  width: 6rem;
+.new_li .div_01{
+  margin-left: .45rem;
+  width: .6rem;
+  position: absolute;
 }
-#container .content_new li .div_02{
-  margin-left: 6rem;
-  width: 6rem;
+.new_li .div_02{
+  margin-left: .6rem;
+  width: .6rem;
+  position: absolute;
+  left: 1.0rem;
 }
-#container .content_new li .div_03{
-  margin-left: 6.5rem;
-  width: 9rem;
+.new_li .div_03{
+  margin-left: 2.9rem;
+  width: .9rem;
 }
-#container .content_new li .div_04{
-  margin-left: 4rem;
-  width: 9rem;
+.new_li .div_04{
+  margin-left: .4rem;
+  width: .9rem;
 }
-#container .content_new li .div_05{
-  margin-left: 8.5rem;
-  width: 23rem;
+.new_li .div_05{
+  margin-left: .85rem;
+  width: 2.3rem;
 }
-#container .content_new li .div_06{
-  margin-left: 7.5rem;
-  width: 10rem;
+.new_li .div_06{
+  margin-left: .75rem;
+  width: 1.0rem;
 }
-#container .content_new li .div_07{
-  margin-left: 6rem;
-  width: 10rem;
+.new_li .div_07{
+  margin-left: .6rem;
+  width: 1.0rem;
 }
-#container .content_new li .div_08{
-  margin-left: 4rem;
-  width: 8rem;
+.new_li .div_07 select{
+  width: .84rem;
+  height: .32rem;
+  border: 1px solid #B7B4B4;
+
 }
-#container .content_new li .div_08 .btn{
-  height: 2.4rem;
-  width: 6rem;
+.new_li .div_08{
+  margin-left: .4rem;
+  width: .8rem;
+}
+.new_li .div_08 .btn{
+  height: .24rem;
+  width: .6rem;
   background: #1AC217; 
   color: #fff;
-  border-radius: 0.4rem;
+  border-radius: .04rem;
 }
-/*#container .content_new li img{
+/*.new_li img{
   height: 50px;
   width: 50px;
   position: relative;
   top: 15px;
 }*/
-#container .content_new li div select{
+.new_li div select{
   height: 30px;
   width: 70px;
-  border: 1px solid aquamarine;
+  /*border: 1px solid aquamarine;*/
 }
+
+

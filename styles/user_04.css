@@ -33,14 +33,14 @@ div.bg div.search div#previous{
 	left:6.4rem;
 }
 div.bg div.search ul{
-	width:101rem;
+	  width:101rem;
     height:1.96rem;
     margin:2.3rem 0 3.3rem 0;
 }
 div.bg div.search ul li{
-	list-style: none;
-	float:left;
-	width:4.98rem;
+  	list-style: none;
+	  float:left;
+	  width:4.98rem;
     height:1.96rem;
     margin:0;
     margin-right: 1.22rem;

@@ -1,0 +1,83 @@
+/*用户介绍*/
+#container .intro{
+  height: 2.09rem;
+  width: 2.94rem;
+  background: #fff;
+  border: 1px solid #DCD5D5;
+  border-radius: .04rem;
+  position: relative;
+  left: -999rem;
+}
+#container .content_new li .div_01:hover .intro,
+#container .content_new li .div_02:hover .intro{
+  left: .7rem;
+  top: -.3rem;
+}
+
+#container .intro .top{
+  border-bottom: 1px solid #E9E3E3;
+  width:2.86rem;
+  height: .79rem;
+  margin: 0 auto;
+  position: absolute;
+  top: .03rem;
+  left: .03rem;
+  /*background: red;*/
+  z-index: 111
+}
+#container .intro .top .logo{
+  width: .597rem;
+  height: .597rem;
+  border-radius: 50%;
+  background: aquamarine;
+  display: inline-block;
+  position: absolute;
+  top: .1rem;
+  left: .25rem;
+}
+#container .intro .top .name{
+  /*width: 10rem;*/
+  height: .25rem;
+  line-height: .25rem;
+  font-size: .16rem;
+  color: #747779; 
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: .15rem;
+  left: .96rem;
+}
+#container .intro .top .icon{
+  width: .498rem;
+  height: .196rem;
+  line-height: .196rem;
+  font-size: .13rem;
+  color: #fff; 
+  text-align: center;
+  display: inline-block;
+  background: #0C84FC;
+  position: absolute;
+  top: .45rem;
+  left: .96rem;
+}
+#container .intro .bottom{
+  margin: .02rem auto;
+  height: 1.25rem;
+  width: 2.86rem;
+  position: absolute;
+  left: .03rem;
+  z-index: 111;
+  text-align: left;
+  top: .8rem;
+  padding-left: .25rem;
+}
+#container .intro .bottom ul li{
+  height: .25rem;
+  line-height: .25rem;
+  width: 2.76rem;
+  font-size: .14rem;
+  color: #747779; 
+  /*background: red;*/
+  margin: .05rem;
+  list-style: none;
+}

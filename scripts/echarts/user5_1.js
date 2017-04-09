@@ -32,6 +32,21 @@ option = {
             saveAsImage: {}                       //存为图片
         }
     },
+    visualMap: {                      //数据的映射
+        min: 0,
+        max: 1000,
+        left: 20,
+        bottom: 40,
+        itemHeight:100,
+        text: ['高','低'],           // 文本，默认为数值文本
+        calculable: true,
+        textStyle:{
+            fontSize:12
+        },
+        inRange:{
+            color:['#00D7E1','#00AAE1','#0082D2']
+        }
+    },
     series: [
         {
             name:"使用人数",             //与legend相对应
@@ -89,6 +104,25 @@ option = {
         
     ]
 };
+////////对于数据进行大小排序，以便在数据视图里面显示时按照顺序
+var temp=[];
+var t;
+for(var k=0;k<34;k++){
+    temp.push(option.series[0].data[k]);
+}
+for(var i=0;i<34;i++){
+    for (var j = i+1; j < 34; j++) {
+        if(temp[i].value<temp[j].value){
+           t=temp[i];
+           temp[i]=temp[j];
+           temp[j]=t;
+        }
+    }
+}
+for(var k=0;k<34;k++){
+    option.series[0].data[k]=temp[k];
+}
+
 if (option && typeof option === "object") {
     myChart.setOption(option, true);                 //是否不跟之前设置的option进行合并，默认为false，即合并。
 }

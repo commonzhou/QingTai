@@ -1,0 +1,93 @@
+/*反馈信息*/
+#container .box{
+  height: 3.54rem;
+  width: 2.94rem;
+  background: #fff;
+  border: 1px solid #DCD5D5;
+  border-radius: .04rem;
+  position: absolute;
+  left: -999rem;
+  /*left: 35rem;
+  top: 4.5rem;*/
+}
+/*#container .content_new li .div_03:hover .box{
+  left: 35rem;
+  top: 4.5rem;
+}*/
+#container .box .topPart{
+  border-bottom: 1px solid #E9E3E3;
+  width:2.86rem;
+  height: .4rem;
+  margin: 0 auto;
+  position: absolute;
+  top: .03rem;
+  left: .03rem;
+  /*background: red;*/
+  z-index: 111;
+}
+#container .box .topPart .text{
+  color: #747779;
+  font-size: .16rem;
+  text-align: center;
+  position: absolute;
+  top: -.15rem;
+  left: 1.133rem;
+  z-index: 111;
+}
+#container .box .topPart .close{
+    height: .18rem;
+    width: .18rem;
+    border-radius: 50%;
+    background: #E20404;
+    position: absolute;
+    top: .05rem;
+    right: .05rem; 
+    z-index: 111;
+}
+#container .box .topPart .close::before{
+  content: '';
+  height: .1rem;
+  width: .02rem;
+  background: #fff;
+  position: absolute;
+  top: .038rem;
+  left: .08rem;
+  transform: rotate(45deg);
+}
+#container .box .topPart .close::after{
+  content: '';
+  height: .1rem;
+  width: .02rem;
+  background: #fff;
+  position: absolute;
+  top: .038rem;
+  left: .08rem;
+  transform: rotate(-45deg);
+}
+
+#container .box .midPart{
+  width: 2.62rem;
+  height: 1.62rem;
+  margin: 0 auto;
+  position: absolute;
+  border: 1px solid #979797;
+  top: .465rem;
+  left: .15rem;
+  z-index: 111;
+  background: #7FD4CF; 
+}
+
+#container .box .botPart{
+  margin: .02rem auto;
+  height: 3.25rem;
+  width: 2.8rem;
+  line-height: .2rem;
+  position: absolute;
+  left: .03rem;
+  text-align: left;
+  top: 2.05rem;
+  padding-left: .25rem;
+  color: #747779;
+  font-size: .14rem;
+  z-index: 111;
+}
