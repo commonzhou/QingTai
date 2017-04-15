@@ -79,7 +79,7 @@ div.bg div.user{
 }
 div.bg div.help div#title{
     height: 2.5rem;
-    width: 7.2rem;
+    width: 20rem;
     font-family: PingFangSC-Regular;
     font-size: 1.8rem;                         /*rem与px不要混用。。*/
     color: #7F7A7A;
@@ -89,9 +89,9 @@ div.bg div.help div#content{
     height: 36.7rem;
     width: 22.6rem;
     font-family: PingFangSC-Regular;
-    font-size: 1.3rem;                      /*兼容性修改了UI*/
+    font-size: 1.5rem;                      /*兼容性修改了UI*/
     color: #5C5858; 
-    line-height: 2.3rem;
+    line-height: 2.6rem;
     margin:1.5rem 2rem 1.5rem 2rem;
 }
 
@@ -117,7 +117,7 @@ div.bg div.user div#toolbox{
 }
 div.bg div.user div#choseNum{
     position: absolute;
-    width:6.4rem;
+    width:8rem;
     height:2.2rem;
     font-family: PingFangSC-Regular;
     font-size: 1.6rem;
@@ -127,7 +127,7 @@ div.bg div.user div#choseNum{
 }
 div.bg div.user div#choseDate{
     position: absolute;
-    width:9.6rem;
+    width:11rem;
     height:2.2rem;
     font-family: PingFangSC-Regular;
     font-size: 1.6rem;
