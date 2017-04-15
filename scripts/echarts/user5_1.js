@@ -122,7 +122,10 @@ for(var i=0;i<34;i++){
 for(var k=0;k<34;k++){
     option.series[0].data[k]=temp[k];
 }
-
+if(window.navigator.userAgent.indexOf("Chrome")== -1){ 
+   option.visualMap.itemHeight=60;
+   option.visualMap.bottom=20;
+}
 if (option && typeof option === "object") {
     myChart.setOption(option, true);                 //是否不跟之前设置的option进行合并，默认为false，即合并。
 }
