@@ -18,11 +18,17 @@
           }
         }
          if(window.navigator.userAgent.indexOf("Edge") !== -1){                             //针对IE Edge
-           if(screen.width>1400&&screen.width<1500){
+           if(screen.width>1400){
             document.documentElement.style.fontSize=12+"px";
             document.documentElement.style.webkitTransform="scale(0.84)";
             document.documentElement.style.marginTop=-72+"px";
             document.documentElement.style.marginLeft=-108+"px";
+          }
+          if(screen.width<1400){
+            document.documentElement.style.fontSize=12+"px";
+            document.documentElement.style.webkitTransform="scale(0.68)";
+            document.documentElement.style.marginTop=-122+"px";
+            document.documentElement.style.marginLeft=-200+"px";
           }
          }
 }

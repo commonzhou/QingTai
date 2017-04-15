@@ -187,12 +187,8 @@ option = {
     }
  }
    
-if(screen.width>1600){                                //响应式布局理念，针对1920*1080显示器的改正
-  option.series[0].label.normal.position[0]=320;
-  option.series[1].label.normal.position[0]=210;
-}
 if(window.navigator.userAgent.indexOf("Chrome") == -1){
-if(screen.width==1366){                                //响应式布局理念，针对1366*768显示器的改正
+if(screen.width<=1400){                                //响应式布局理念，针对1366*768显示器的改正
   option.series[0].label.normal.position[0]=260;
   option.series[1].label.normal.position[0]=160;
   var manpos=man*21.8/1000+4.7-1.6;
@@ -219,7 +215,9 @@ if(screen.width==1366){                                //响应式布局理念�
      
 
 
-if(screen.width>1600){                                //响应式布局理念，针对1920*1080显示器的改正
+if(screen.width>1600){  
+ option.series[0].label.normal.position[0]=320;
+ option.series[1].label.normal.position[0]=210;                              //响应式布局理念，针对1920*1080显示器的改正
  var manpos=man*21.8/1000+4.7-1.6;
  var womanpos=woman*21.8/1000+4.7-1.6;
  var circledis=0.535;                                //两圆半径之差
@@ -239,8 +237,9 @@ if(screen.width>1600){                                //响应式布局理念，
  woman2.style.top=10.3+"rem";
  woman2.style.left=womanpos2+2.8*diff+"rem";
 }
+
 if(window.navigator.userAgent.indexOf("Chrome") !== -1){   //针对chrome 12px最小字体的问题
-    if(screen.width==1366){
+    if(screen.width<=1500){
  document.getElementById("subTitle").style.width=15+"rem";   
  option.series[0].label.normal.position[0]=340;
  option.series[1].label.normal.position[0]=240;
@@ -263,7 +262,7 @@ if(window.navigator.userAgent.indexOf("Chrome") !== -1){   //针对chrome 12px�
  woman2.style.top=10.3+"rem";
  woman2.style.left=womanpos2+2.8*diff+"rem";     
     }
-    if(screen.width==1536){
+    if(screen.width>1500&&screen.width<=1600){
  document.getElementById("subTitle").style.width=15+"rem";   
  option.series[0].label.normal.position[0]=340;
  option.series[1].label.normal.position[0]=240;
@@ -286,7 +285,7 @@ if(window.navigator.userAgent.indexOf("Chrome") !== -1){   //针对chrome 12px�
  woman2.style.top=10.3+"rem";
  woman2.style.left=womanpos2+2.8*diff+"rem";     
     }
-    if(window.navigator.userAgent.indexOf("Edge") !== -1&&screen.width==1477){
+    if(window.navigator.userAgent.indexOf("Edge") !== -1){
        document.getElementById("subTitle").style.width=15+"rem";   
  option.series[0].label.normal.position[0]=340;
  option.series[1].label.normal.position[0]=240;

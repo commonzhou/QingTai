@@ -25,8 +25,8 @@ var myChart=echarts.init(main);
     containLabel: true,               //不溢出
    	bottom:52,
    	left:59,
-   	height:279,
-   	width:560                         //此处ui为614，但是echarts溢出。所以只好改了。。。
+   	height:250,
+   	width:530                         //此处ui为614，但是echarts溢出。所以只好改了。。。
    },
    xAxis:{
    	type:'category',
@@ -100,17 +100,21 @@ var myChart=echarts.init(main);
 };
    
 if(window.navigator.userAgent.indexOf("Chrome") !== -1){   //针对chrome 12px最小字体的问题
-    if(screen.width==1366){
+    if(screen.width<=1400){
        option.grid.height=350;
        option.grid.width=700;     
     }
-    if(screen.width==1536){
+    if(screen.width>1500&&screen.width<1600){
        option.grid.height=350;
        option.grid.width=680;     
     }
-     if(screen.width==1477){
+     if(screen.width>1400&&screen.width<=1500){
        option.grid.height=370;
        option.grid.width=700;     
+    }
+    if(window.navigator.userAgent.indexOf("Edge") !== -1){
+       option.grid.height=370;
+       option.grid.width=700;   
     }
 }
 if(screen.width>1600){                                //响应式布局理念，针对1920*1080显示器的改正
