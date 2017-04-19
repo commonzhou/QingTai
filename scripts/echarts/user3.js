@@ -43,7 +43,7 @@ var myChart=echarts.init(main);
    	type:'category',
    	boundaryGap: false,
     axisLine: {onZero: true},
-   	data:['2-11','2-11','2-11','2-11','2-11','2-2'],
+   	data:['2-10','2-11','2-12','2-13','2-14','2-15','2-16'],
    	 axisTick: {
                 show: true,
                 alignWithLabel: true             //保证刻度线和标签对齐
@@ -95,7 +95,7 @@ var myChart=echarts.init(main);
                 color: '#11C728'
             }
         },
-   	 data:[2200,2400,2800,3200,2700,2200]
+   	 data:[2200,2400,2800,3200,2700,2200,2000]
    },
    {
    	 name:"搜帖次数",
@@ -107,7 +107,7 @@ var myChart=echarts.init(main);
                 color: '#59C8F2'
             }
         },
-   	 data:[0,400,800,1245,666,333]
+   	 data:[0,400,800,1245,666,333,111]
    }
 
    ]
@@ -137,6 +137,48 @@ if(window.navigator.userAgent.indexOf("Chrome") !== -1){   //针对chrome 12px�
       document.getElementById("date").style.left=distance+72+"px";     
     }
 }
+
+/////月周日切换
+$("#month").click(function(){
+   this.style.backgroundColor="#4EC4F1";
+   this.style.color="#FFF";
+   document.getElementById("week").style.backgroundColor="#FFF";
+   document.getElementById("date").style.backgroundColor="#FFF";
+   document.getElementById("week").style.color="#807D7D";
+   document.getElementById("date").style.color="#807D7D";
+   option.xAxis.data=['2-10','2-11','2-12','2-13','2-14','2-15','2-16'];
+   option.series[0].data=[2200,2400,2800,3200,2700,2200,2000];
+   option.series[1].data=[0,400,800,1245,666,333,111];
+   
+   myChart.setOption(option); 
+});
+$("#week").click(function(){
+   this.style.backgroundColor="#4EC4F1";
+   this.style.color="#FFF";
+   document.getElementById("month").style.backgroundColor="#FFF";
+   document.getElementById("date").style.backgroundColor="#FFF";
+   document.getElementById("month").style.color="#807D7D";
+   document.getElementById("date").style.color="#807D7D";
+   option.xAxis.data=['4','3','2','1'];
+   option.series[0].data=[500,1000,2000,500];
+   option.series[1].data=[100,300,1000,300];
+  
+   myChart.setOption(option);   
+});
+$("#date").click(function(){
+   this.style.backgroundColor="#4EC4F1";
+   this.style.color="#FFF";
+   document.getElementById("week").style.backgroundColor="#FFF";
+   document.getElementById("month").style.backgroundColor="#FFF";
+   document.getElementById("week").style.color="#807D7D";
+   document.getElementById("month").style.color="#807D7D";
+   option.xAxis.data=['1月','2月','3月','4月'];
+   option.series[0].data=[0,100,1000,1500];
+   option.series[1].data=[220,300,1300,1900];
+   
+   myChart.setOption(option); 
+});
+
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);           
 /////由于浏览器的字体大小问题，所以用这个先获取legend的left数值，再进行加减赋值给月周日的left

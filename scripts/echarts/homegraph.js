@@ -32,7 +32,7 @@ var myChart=echarts.init(main);
    	type:'category',
    	boundaryGap: false,
     axisLine: {onZero: true},
-   	data:['2-11','2-11','2-11','2-11','2-11','2-2'],
+   	data:['2-10','2-11','2-12','2-13','2-14','2-15','2-16'],
    	 axisTick: {
                 show: true,
                 alignWithLabel: true             //保证刻度线和标签对齐
@@ -79,21 +79,21 @@ var myChart=echarts.init(main);
    	 type:"line",
      symbol:"circle",
      symbolSize:12,
-   	 data:[0,600,1500,2220,1600,533]
+   	 data:[0,600,1500,2220,1600,666,533]
    },
    {
    	 name:"启动次数",
    	 type:"line",
      symbol:"circle",
      symbolSize:12,
-  	 data:[0,600,1500,2220,1600,533]
+  	 data:[0,600,1500,2220,1600,666,533]
    },
    {
    	 name:"活跃用户",
    	 type:"line",
      symbol:"circle",
      symbolSize:12,
-   	 data:[0,600,1500,2220,1600,533]
+   	 data:[0,600,1500,2220,1600,666,533]
    }
 
    ]
@@ -122,6 +122,53 @@ if(screen.width>1600){                                //响应式布局理念，
   option.grid.width=700;
 }
 
-// 使用刚指定的配置项和数据显示图表。
+/////月周日切换
+$("#month").click(function(){
+   this.style.backgroundColor="#4EC4F1";
+   this.style.color="#FFF";
+   document.getElementById("week").style.backgroundColor="#FFF";
+   document.getElementById("date").style.backgroundColor="#FFF";
+   document.getElementById("week").style.color="#807D7D";
+   document.getElementById("date").style.color="#807D7D";
+   option.xAxis.data=['2-10','2-11','2-12','2-13','2-14','2-15','2-16'];
+   option.series[0].data=[0,600,1500,2220,1600,666,533];
+   option.series[1].data=[0,600,1500,2220,1600,666,533];
+   option.series[2].data=[0,600,1500,2220,1600,666,533];
+   myChart.setOption(option); 
+});
+$("#week").click(function(){
+   this.style.backgroundColor="#4EC4F1";
+   this.style.color="#FFF";
+   document.getElementById("month").style.backgroundColor="#FFF";
+   document.getElementById("date").style.backgroundColor="#FFF";
+   document.getElementById("month").style.color="#807D7D";
+   document.getElementById("date").style.color="#807D7D";
+   option.xAxis.data=['4','3','2','1'];
+   option.series[0].data=[500,1000,2000,500];
+   option.series[1].data=[500,1000,2000,500];
+   option.series[2].data=[500,1000,2000,500];
+   myChart.setOption(option);   
+});
+$("#date").click(function(){
+   this.style.backgroundColor="#4EC4F1";
+   this.style.color="#FFF";
+   document.getElementById("week").style.backgroundColor="#FFF";
+   document.getElementById("month").style.backgroundColor="#FFF";
+   document.getElementById("week").style.color="#807D7D";
+   document.getElementById("month").style.color="#807D7D";
+   option.xAxis.data=['1月','2月','3月','4月'];
+   option.series[0].data=[0,100,1000,1500];
+   option.series[1].data=[0,100,1000,1500];
+   option.series[2].data=[0,100,1000,1500];
+   myChart.setOption(option); 
+});
+$("#query").click(function(){
+   option.xAxis.data=['2-10','2-11','2-12','2-13','2-14','2-15','2-16'];
+   option.series[0].data=[333,600,1500,2220,1600,666,533];
+   option.series[1].data=[333,600,1500,2220,1600,666,533];
+   option.series[2].data=[333,600,1500,2220,1600,666,533];
+   myChart.setOption(option); 
+});
 
+// 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);           
