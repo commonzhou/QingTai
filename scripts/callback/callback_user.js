@@ -1,40 +1,91 @@
-var userdata = {
-    data: [
+var data = [
         {
-            userLogo: ' 1111',
-            userName: '昵称昵称昵称',
-            userIcon: 'java',
-            userItro: '你好',
-            userSchool: '西安电子科技大学',
-            userStu: '本科',
-            userLoc: '陕西 西安'
+            avator: 'http://v1.qzone.cc/avatar/201408/03/23/44/53de58e5da74c247.jpg%21200x200.jpg',
+            nickName: '东海大道',
+            label: 'java',
+            introduction: '你好',
+            school: '西安电子科技大学',
+            education: '本科',
+            location: '陕西 西安'
         },
         {
-            userLogo: ' 2222',
-            userName: '昵称昵称昵称',
-            userIcon: 'c++',
+            avator: 'http://www.qqxoo.com/uploads/allimg/170421/2336104414-24.jpg',
+            nickName: '尽快返回',
+            label: 'c++',
             userItro: '你好',
-            userSchool: '长安大学',
-            userStu: '研究生',
-            userLoc: '陕西 西安'
+            school: '长安大学',
+            education: '研究生',
+            location: '陕西 西安'
+        },
+        {
+            avator: 'http://scimg.jb51.net/touxiang/201704/2017042116075371.jpg',
+            nickName: '计算机课',
+            label: 'java',
+            introduction: '你好',
+            school: '西安电子科技大学',
+            education: '本科',
+            location: '陕西 西安'
+        },
+        {
+            avator: 'http://www.qqxoo.com/uploads/allimg/170421/2336104414-24.jpg',
+            nickName: '科技支付',
+            label: 'c++',
+            userItro: '你好',
+            school: '长安大学',
+            education: '研究生',
+            location: '陕西 西安'
+        },
+        {
+            avator: 'http://v1.qzone.cc/avatar/201408/03/23/44/53de58e5da74c247.jpg%21200x200.jpg',
+            nickName: '电饭锅',
+            label: 'java',
+            introduction: '你好',
+            school: '西安电子科技大学',
+            education: '本科',
+            location: '陕西 西安'
+        },
+        {
+            avator: 'http://www.qqxoo.com/uploads/allimg/170421/2336104414-24.jpg',
+            nickName: '阿大使馆',
+            label: 'c++',
+            userItro: '你好',
+            school: '长安大学',
+            education: '研究生',
+            location: '陕西 西安'
+        },
+        {
+            avator: 'http://v1.qzone.cc/avatar/201408/03/23/44/53de58e5da74c247.jpg%21200x200.jpg',
+            nickName: '反射光栅狗头',
+            label: 'java',
+            introduction: '你好',
+            school: '西安电子科技大学',
+            education: '本科',
+            location: '陕西 西安'
+        },
+        {
+            avator: 'http://www.qqxoo.com/uploads/allimg/170421/2336104414-24.jpg',
+            nickName: '大师傅给',
+            label: 'c++',
+            userItro: '你好',
+            school: '长安大学',
+            education: '研究生',
+            location: '陕西 西安'
         }
-    ],
-    serverTime: 123456
-};
-var data = userdata.data;
+    ];
+
 var domList = '';
 var dom;
 var intro = document.getElementsByClassName('intro');
 for(var i = 0; i < data.length;i++){
     dom =
     '<div class="top">'
-    + '<div class="logo">' + data[i].userLogo + '</div>'
-    + '<div class="name">' + data[i].userName + '</div>'
-    + '<div class="icon">' + data[i].userIcon + '</div>'
-    + '</div><div class="bottom"><ul><li>介绍：' + data[i].userItro + '</li>'
-    + '<li>学校：' + data[i].userSchool + '</li>'
-    + '<li>学历：' + data[i].userStu + '</li>'
-    + '<li>所在地：' + data[i].userLoc + '</li>'
+    + '<div class="logo"><img class="avator" src="' + data[i].avator + '"/></div>'
+    + '<div class="name">' + data[i].nickName + '</div>'
+    + '<div class="icon">' + data[i].label + '</div>'
+    + '</div><div class="bottom"><ul><li>介绍：' + data[i].introduction + '</li>'
+    + '<li>学校：' + data[i].school + '</li>'
+    + '<li>学历：' + data[i].education + '</li>'
+    + '<li>所在地：' + data[i].location + '</li>'
     + '</ul></div></div>';
    intro[i].innerHTML = dom;
 }

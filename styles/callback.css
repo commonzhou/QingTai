@@ -47,6 +47,8 @@ div.bg_02 .content{
 /*新建ul标签*/
 .bg_02 .content_new{
   width: 12.92rem;
+  height: 4rem;
+  overflow-y: scroll;
   /*margin: 0 auto;*/
 }
 #container .content_new li{
@@ -56,6 +58,7 @@ div.bg_02 .content{
   line-height: .71rem;
   width: 12.92rem;
   border-bottom: 1px solid #F3EFEF;
+  position: relative;
 }
 #container .content_new li div{
   font-size: .14rem;
@@ -68,6 +71,16 @@ div.bg_02 .content{
   width: .9rem;
   position: absolute;
 }
+#container .content_new li .div_01 img.nickName{
+  width: .597rem;
+  height: .597rem;
+  border-radius: 50%;
+  /*background: aquamarine;*/
+  display: inline-block;
+  position: absolute;
+  /*top: .1rem;*/
+  left: 0rem;
+}
 #container .content_new li .div_02{
   margin-left: 2.1rem;
   width: .6rem;
@@ -75,6 +88,10 @@ div.bg_02 .content{
 #container .content_new li .div_03{
   margin-left: 1.0rem;
   width: 2.7rem;
+}
+#container .content_new li .div_03 a.contentAll{
+  text-decoration: none;
+  color: black;
 }
 #container .content_new li .div_04{
   margin-left: .7rem;

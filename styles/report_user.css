@@ -12,6 +12,7 @@
 #container .content_new li .div_02:hover .intro{
   left: .7rem;
   top: -.3rem;
+  z-index: 100;
 }
 
 #container .intro .top{
@@ -34,6 +35,16 @@
   position: absolute;
   top: .1rem;
   left: .25rem;
+}
+#container .intro .top .logo img.avator{
+  width: .597rem;
+  height: .597rem;
+  border-radius: 50%;
+  /*background: aquamarine;*/
+  display: inline-block;
+  position: absolute;
+  /*top: .1rem;*/
+  left: 0rem;
 }
 #container .intro .top .name{
   /*width: 10rem;*/

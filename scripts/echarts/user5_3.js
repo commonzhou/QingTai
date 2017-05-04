@@ -1,8 +1,8 @@
 var dom = document.getElementById("graph6");
 var myChart = echarts.init(dom);
 var option = null;
-var man=798;
-var woman=898;
+var man=798;                  //60到380
+var woman=898;                 //15到560
 var xMax=1000;
 option = {
     title:{
@@ -76,6 +76,7 @@ option = {
             barWidth:11.1,
             barGap:18.2,
             barCategoryGap:18.2, 
+            barMinHeight:30,
             label: {
 	            normal: {
 	                show: true,
@@ -243,6 +244,7 @@ if(window.navigator.userAgent.indexOf("Chrome") !== -1){   //针对chrome 12px�
  document.getElementById("subTitle").style.width=15+"rem";   
  option.series[0].label.normal.position[0]=340;
  option.series[1].label.normal.position[0]=240;
+
  var manpos=man*21.8/1000+4.7-1.6;
  var womanpos=woman*21.8/1000+4.7-1.6;
  var circledis=0.535;                                //两圆半径之差
@@ -264,19 +266,21 @@ if(window.navigator.userAgent.indexOf("Chrome") !== -1){   //针对chrome 12px�
     }
     if(screen.width>1500&&screen.width<=1600){
  document.getElementById("subTitle").style.width=15+"rem";   
- option.series[0].label.normal.position[0]=340;
- option.series[1].label.normal.position[0]=240;
+ option.series[0].label.normal.position[0]=310;
+ option.series[1].label.normal.position[0]=210;
+ 
  var manpos=man*21.8/1000+4.7-1.6;
  var womanpos=woman*21.8/1000+4.7-1.6;
+ if(man<450&&man>70)  manpos=man*21.8/1000+3-1.6;
  var circledis=0.535;                                //两圆半径之差
  var manpos2=manpos+circledis;
  var womanpos2=womanpos+circledis;
  var diff=1;                                      //克服浏览器的差异，折衷地偏移量
  var man1=document.getElementById("man1");
- man1.style.top=7.38-0.8*diff+"rem";
+ man1.style.top=7.48-0.8*diff+"rem";
  man1.style.left=manpos+2*diff+"rem";
  var man1=document.getElementById("man2");
- man2.style.top=7.91-0.8*diff+"rem";
+ man2.style.top=8.01-0.8*diff+"rem";
  man2.style.left=manpos2+2*diff+"rem";
  var woman1=document.getElementById("woman1");
  woman1.style.top=9.8+"rem";                           //此处又没有按照UI，阿弥陀佛

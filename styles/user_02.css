@@ -141,7 +141,7 @@ div.bg div.top ul#content li.content ul li.label2{
 }
 
 div.bg div.top ul#content li.content ul li.name{
-    width:18.7rem;
+    width:22rem;
     height:2.2rem;
     margin-left: 1.2rem;
     margin-top: 1.5rem;
@@ -153,22 +153,22 @@ div.bg div.top ul#content li.content ul li.name{
 div.bg div.top ul#content li.content ul li.image{
     width:4rem;
     height:4rem;
-    margin-left: 36rem;
+    margin-left: 33.5rem;
     margin-top: 0.55rem;
 }
 div.bg div.top ul#content li.content ul li.nickname{
-    width:2.8rem;
+    width:8rem;
     height:2rem;
-    margin-left: 1.22rem;
+    margin-left: 1.8rem;
     margin-top: 1.55rem;
     font-family: PingFangSC-Regular;
     font-size: 1.4rem;
     color:  #747779;
-    text-align: center;
+    text-align: left;
 }
 div.bg div.top ul#content li.content ul li.image2{
     width:4rem;
     height:4rem;
-    margin-left: 30rem;
+    margin-left: 27.3rem;
     margin-top: 0.55rem;
 }

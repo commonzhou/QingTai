@@ -9,6 +9,8 @@
   left: -999rem;
   /*left: 57rem;
   top: 4.5rem;*/
+  z-index: 100;
+  /*cursor: pointer;*/
 }
 #container .mess .topPart{
   border-bottom: 1px solid #E9E3E3;
@@ -81,6 +83,17 @@
   position: absolute;
   top: .1rem;
   left: .25rem;
+  z-index: 111;
+}
+#container .mess .midPart .logo img.userLogo{
+  width: .597rem;
+  height: .597rem;
+  border-radius: 50%;
+  background: aquamarine;
+  display: inline-block;
+  position: absolute;
+  /*top: .1rem;*/
+  left: 0rem;
   z-index: 111;
 }
 #container .mess .midPart .name{

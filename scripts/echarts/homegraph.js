@@ -1,5 +1,26 @@
 var main=document.getElementById("graph1");
 var myChart=echarts.init(main);
+
+var jsondata="http://114.115.221.206:8088/qtserver/admin/main/getRegisterNumByDay";
+//$.getJSON(jsondata,function(data){
+    //var stringdata=JSON.stringify(data);
+    //var newjson=JSON.parse(stringdata);
+    //alert(stringdata);
+//}); 
+$.ajax({
+  url: jsondata,type:"get", 
+
+  dataType: "json" ,
+  success: function(data){
+      var stringdata=JSON.stringify(data);
+    var newjson=JSON.parse(stringdata);
+    alert(stringdata);
+}
+  
+
+}); 
+   
+
  // 指定图表的配置项和数据
  var option={
    
@@ -32,7 +53,7 @@ var myChart=echarts.init(main);
    	type:'category',
    	boundaryGap: false,
     axisLine: {onZero: true},
-   	data:['2-10','2-11','2-12','2-13','2-14','2-15','2-16'],
+   	data:['1月','2月','3月','4月'],
    	 axisTick: {
                 show: true,
                 alignWithLabel: true             //保证刻度线和标签对齐
@@ -79,21 +100,21 @@ var myChart=echarts.init(main);
    	 type:"line",
      symbol:"circle",
      symbolSize:12,
-   	 data:[0,600,1500,2220,1600,666,533]
+   	 data:[0,100,1000,1500]
    },
    {
    	 name:"启动次数",
    	 type:"line",
      symbol:"circle",
      symbolSize:12,
-  	 data:[0,600,1500,2220,1600,666,533]
+  	 data:[0,100,1000,1500]
    },
    {
    	 name:"活跃用户",
    	 type:"line",
      symbol:"circle",
      symbolSize:12,
-   	 data:[0,600,1500,2220,1600,666,533]
+   	 data:[0,100,1000,1500]
    }
 
    ]
@@ -123,14 +144,14 @@ if(screen.width>1600){                                //响应式布局理念，
 }
 
 /////月周日切换
-$("#month").click(function(){
+$("#date").click(function(){
    this.style.backgroundColor="#4EC4F1";
    this.style.color="#FFF";
    document.getElementById("week").style.backgroundColor="#FFF";
-   document.getElementById("date").style.backgroundColor="#FFF";
+   document.getElementById("month").style.backgroundColor="#FFF";
    document.getElementById("week").style.color="#807D7D";
-   document.getElementById("date").style.color="#807D7D";
-   option.xAxis.data=['2-10','2-11','2-12','2-13','2-14','2-15','2-16'];
+   document.getElementById("month").style.color="#807D7D";
+   option.xAxis.data=['4-17','4-18','4-19','4-20','4-21','4-22','4-23'];
    option.series[0].data=[0,600,1500,2220,1600,666,533];
    option.series[1].data=[0,600,1500,2220,1600,666,533];
    option.series[2].data=[0,600,1500,2220,1600,666,533];
@@ -149,13 +170,13 @@ $("#week").click(function(){
    option.series[2].data=[500,1000,2000,500];
    myChart.setOption(option);   
 });
-$("#date").click(function(){
+$("#month").click(function(){
    this.style.backgroundColor="#4EC4F1";
    this.style.color="#FFF";
    document.getElementById("week").style.backgroundColor="#FFF";
-   document.getElementById("month").style.backgroundColor="#FFF";
+   document.getElementById("date").style.backgroundColor="#FFF";
    document.getElementById("week").style.color="#807D7D";
-   document.getElementById("month").style.color="#807D7D";
+   document.getElementById("date").style.color="#807D7D";
    option.xAxis.data=['1月','2月','3月','4月'];
    option.series[0].data=[0,100,1000,1500];
    option.series[1].data=[0,100,1000,1500];
@@ -163,7 +184,7 @@ $("#date").click(function(){
    myChart.setOption(option); 
 });
 $("#query").click(function(){
-   option.xAxis.data=['2-10','2-11','2-12','2-13','2-14','2-15','2-16'];
+   option.xAxis.data=['7-17','7-18','7-19','7-20','7-21','7-22','7-23'];
    option.series[0].data=[333,600,1500,2220,1600,666,533];
    option.series[1].data=[333,600,1500,2220,1600,666,533];
    option.series[2].data=[333,600,1500,2220,1600,666,533];

@@ -60,6 +60,7 @@ div.bg_02 .content{
   width: 12.92rem;
   /*background: red;*/
   border-bottom: 1px solid #F3EFEF;
+  position: relative;
 }
 .new_li div{
   font-size: .14rem;
@@ -72,11 +73,31 @@ div.bg_02 .content{
   width: .6rem;
   position: absolute;
 }
+.new_li .div_01 img.sender{
+  width: .597rem;
+  height: .597rem;
+  border-radius: 50%;
+  /*background: aquamarine;*/
+  display: inline-block;
+  position: absolute;
+  top: .05rem;
+  left: 0rem;
+}
 .new_li .div_02{
   margin-left: .6rem;
   width: .6rem;
   position: absolute;
   left: 1.0rem;
+}
+.new_li .div_02 img.receiver{
+  width: .597rem;
+  height: .597rem;
+  border-radius: 50%;
+  /*background: aquamarine;*/
+  display: inline-block;
+  position: absolute;
+  top: .05rem;
+  left: 0rem;
 }
 .new_li .div_03{
   margin-left: 2.9rem;
@@ -89,6 +110,10 @@ div.bg_02 .content{
 .new_li .div_05{
   margin-left: .85rem;
   width: 2.3rem;
+}
+.new_li .div_05 a.point{
+  text-decoration: none;
+  color: black
 }
 .new_li .div_06{
   margin-left: .75rem;
@@ -122,9 +147,14 @@ div.bg_02 .content{
   top: 15px;
 }*/
 .new_li div select{
-  height: 30px;
-  width: 70px;
+  height: 0.3rem;
+  width: 0.7rem;
   /*border: 1px solid aquamarine;*/
+}
+.content_new{
+  height: 4rem;
+  width: 0.36rem;
+  overflow-y: scroll;
 }
 
 
