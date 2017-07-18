@@ -19,7 +19,7 @@ window.onload = function(){
   }
 
   function loginNow() {
-    if (username.value == 1604122004 && password.value == 1604122004) {
+    if (username.value == 123 && password.value == 123) {
       window.location.href = 'home.html';
     } else {
       alert("用户名或密码错误");

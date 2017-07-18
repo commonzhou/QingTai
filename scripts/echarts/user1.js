@@ -1,6 +1,53 @@
 var main=document.getElementById("graph2");
 var myChart=echarts.init(main);
  // 指定图表的配置项和数据
+var datas=new Array();
+var datas2=new Array();
+var jsondata1="http://114.115.221.206:8088/qtserver/admin/analysis/getArticleNumByMonth";
+var jsondata2="http://114.115.221.206:8088/qtserver/admin/analysis/getArticleNumByWeek";
+var jsondata3="http://114.115.221.206:8088/qtserver/admin/analysis/getArticleNumByDay";
+
+$.ajax({
+  url: jsondata1,type:"get", 
+  dataType: "json" ,
+  success: function(data){
+    var stringdata=JSON.stringify(data);
+    var newjson=JSON.parse(stringdata);
+    //alert(stringdata);
+    datas[0]=newjson.hresult[3]; datas[1]=newjson.hresult[2]; datas[2]=newjson.hresult[1]; datas[3]=newjson.hresult[0];
+    datas2[0]=newjson.sresult[3]; datas2[1]=newjson.sresult[2]; datas2[2]=newjson.sresult[1]; datas2[3]=newjson.sresult[0];
+   // alert(datas);                            如果在ajax外的话，可能来不及获取，导致值为空
+    $("#month").trigger("click");              //模拟点击来保证打开时主页有数值
+}
+}); 
+$.ajax({
+  url: jsondata2,type:"get", 
+  dataType: "json" ,
+  success: function(data){
+    var stringdata=JSON.stringify(data);
+    var newjson=JSON.parse(stringdata);
+    //alert(stringdata);
+    datas[4]=newjson.hresult[3]; datas[5]=newjson.hresult[2]; datas[6]=newjson.hresult[1]; datas[7]=newjson.hresult[0];
+    datas2[4]=newjson.sresult[3]; datas2[5]=newjson.sresult[2]; datas2[6]=newjson.sresult[1]; datas2[7]=newjson.sresult[0];
+   // alert(datas);                            如果在ajax外的话，可能来不及获取，导致值为空
+    $("#month").trigger("click");              //模拟点击来保证打开时主页有数值
+}
+}); 
+$.ajax({
+  url: jsondata3,type:"get", 
+  dataType: "json" ,
+  success: function(data){
+    var stringdata=JSON.stringify(data);
+    var newjson=JSON.parse(stringdata);
+    //alert(stringdata);
+    datas[8]=newjson.hresult[6]; datas[9]=newjson.hresult[5]; datas[10]=newjson.hresult[4]; datas[11]=newjson.hresult[3];
+    datas[12]=newjson.hresult[2]; datas[13]=newjson.hresult[1]; datas[14]=newjson.hresult[0]; 
+    datas2[8]=newjson.sresult[6]; datas2[9]=newjson.sresult[5]; datas2[10]=newjson.sresult[4]; datas2[11]=newjson.sresult[3];
+    datas2[12]=newjson.sresult[2]; datas2[13]=newjson.sresult[1]; datas2[14]=newjson.sresult[0];
+   // alert(datas);                            如果在ajax外的话，可能来不及获取，导致值为空
+    $("#month").trigger("click");              //模拟点击来保证打开时主页有数值
+}
+}); 
  var option={
    
    tooltip:{},
@@ -94,8 +141,8 @@ var myChart=echarts.init(main);
             normal: {
                 color: '#11C728'
             }
-        },
-   	 data:[0,100,1000,1500]
+        }
+   	
    },
    {
    	 name:"分享帖",
@@ -106,8 +153,8 @@ var myChart=echarts.init(main);
             normal: {
                 color: '#59C8F2'
             }
-        },
-   	 data:[220,300,1300,1900]
+        }
+   	
    }
 
    ]
@@ -137,6 +184,10 @@ if(window.navigator.userAgent.indexOf("Chrome") !== -1){   //针对chrome 12px�
     }
 }
 
+var myDate=new Date();
+var gettedMonth=myDate.getMonth()+1;
+var gettedDate=myDate.getDate();
+
 /////月周日切换
 $("#date").click(function(){
    this.style.backgroundColor="#4EC4F1";
@@ -145,9 +196,10 @@ $("#date").click(function(){
    document.getElementById("month").style.backgroundColor="#FFF";
    document.getElementById("week").style.color="#807D7D";
    document.getElementById("month").style.color="#807D7D";
-   option.xAxis.data=['4-17','4-18','4-19','4-20','4-21','4-22','4-23'];
-   option.series[0].data=[2200,2400,2800,3200,2700,2200,2000];
-   option.series[1].data=[0,400,800,1245,666,333,111];
+   option.xAxis.data=[gettedMonth+'-'+(gettedDate-6),gettedMonth+'-'+(gettedDate-5),gettedMonth+'-'+(gettedDate-4),gettedMonth+'-'+(gettedDate-3),
+   gettedMonth+'-'+(gettedDate-2),gettedMonth+'-'+(gettedDate-1),gettedMonth+'-'+gettedDate];
+   option.series[0].data=[datas[8],datas[9],datas[10],datas[11],datas[12],datas[13],datas[14],datas[15]];
+   option.series[1].data=[datas2[8],datas2[9],datas2[10],datas2[11],datas2[12],datas2[13],datas2[14],datas2[15]];
    
    myChart.setOption(option); 
 });
@@ -159,8 +211,8 @@ $("#week").click(function(){
    document.getElementById("month").style.color="#807D7D";
    document.getElementById("date").style.color="#807D7D";
    option.xAxis.data=['4','3','2','1'];
-   option.series[0].data=[500,1000,2000,500];
-   option.series[1].data=[100,300,1000,300];
+   option.series[0].data=[datas[4],datas[5],datas[6],datas[7]];
+   option.series[1].data=[datas2[4],datas2[5],datas2[6],datas2[7]];
   
    myChart.setOption(option);   
 });
@@ -171,9 +223,11 @@ $("#month").click(function(){
    document.getElementById("date").style.backgroundColor="#FFF";
    document.getElementById("week").style.color="#807D7D";
    document.getElementById("date").style.color="#807D7D";
-   option.xAxis.data=['1月','2月','3月','4月'];
-   option.series[0].data=[0,100,1000,1500];
-   option.series[1].data=[220,300,1300,1900];
+  //判断减法后的大小，月份为负数需要加12
+   option.xAxis.data=[(((gettedMonth-3)>0)?(gettedMonth-3):(gettedMonth-3+12))+'月',(((gettedMonth-2)>0)?(gettedMonth-2):(gettedMonth-2+12))+'月',
+   (((gettedMonth-1)>0)?(gettedMonth-1):(gettedMonth-1+12))+'月',gettedMonth+'月'];
+   option.series[0].data=[datas[0],datas[1],datas[2],datas[3]];
+   option.series[1].data=[datas2[0],datas2[1],datas2[2],datas2[3]];
    
    myChart.setOption(option); 
 });

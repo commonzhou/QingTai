@@ -1,12 +1,15 @@
 nav ul li a.report{
     color: #4EC4F1; 
 }
+div.bg{
+  height:5.5rem;
+}
 div.bg_02{
-  height: 4.35rem;
+  height: 4.7rem;
   width: 12.93rem;
   position: absolute;
   left: .36rem;
-  bottom: .73rem;
+  bottom: .50rem;
   background: #fff;
 }
 div.bg_02 .content{
@@ -50,6 +53,7 @@ div.bg_02 .content{
 /*新建ul标签*/
 .bg_02 .content_new{
   width: 12.92rem;
+  height:4.4rem;
   /*margin: 0 auto;*/
 }
 .new_li{
@@ -115,6 +119,9 @@ div.bg_02 .content{
   text-decoration: none;
   color: black
 }
+.new_li .div_05 a:hover{
+  color:#1AC217;
+}
 .new_li .div_06{
   margin-left: .75rem;
   width: 1.0rem;
@@ -152,7 +159,7 @@ div.bg_02 .content{
   /*border: 1px solid aquamarine;*/
 }
 .content_new{
-  height: 4rem;
+  height: 4.4rem;
   width: 0.36rem;
   overflow-y: scroll;
 }

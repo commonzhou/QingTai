@@ -1,3 +1,18 @@
+var datas=new Array();
+var jsondata1="http://114.115.221.206:8088/qtserver/admin/feedback/getFeedBackDetail";
+$.ajax({
+  url: jsondata1,type:"get", 
+
+  dataType: "json" ,
+  success: function(data){
+    var stringdata=JSON.stringify(data);
+    var newjson=JSON.parse(stringdata);
+    alert(stringdata);
+   // datas[0]=newjson.result[3]; datas[1]=newjson.result[2]; datas[2]=newjson.result[1]; datas[3]=newjson.result[0];
+   // alert(datas);                            如果在ajax外的话，可能来不及获取，导致值为空
+    //$("#month").trigger("click");              //模拟点击来保证打开时主页有数值
+}
+}); 
 var data = [
         {
             backPic:'http://img1.gtimg.com/news/pics/hv1/201/254/2203/143315046.jpg',
@@ -47,14 +62,25 @@ for (var j = 0;j < data.length; j++){
     box[j].innerHTML = domList[j];
 }
 
-var click_div = document.getElementsByClassName('div_03');
+var click_div = $('.div_03 a');
 for(var i = 0 ; i < click_div.length;i++){
-        click_div[i].onclick = (function(index){
+        click_div[i].onmouseover = (function(index){
            return function(e){
                 e.stopPropagation();
                 box[index].style.left = 3.5 + "rem";
                 box[index].style.top = .45 + "rem";
                 box[index].style.display = 'block';
+                box[index].style.width=2.94+"rem";
+                box[index].style.height=4.66+"rem";
+            };
+        })(i);
+        click_div[i].onclick=(function(index){
+            return function(e){
+               e.stopPropagation();
+                box[index].style.width=12.93+"rem";
+                box[index].style.height=10+"rem";
+                box[index].style.left =0 + "rem";
+                box[index].style.top = 0 + "rem";
             };
         })(i);
 

@@ -5,6 +5,21 @@ function randomData() {
     return Math.round(Math.random()*1000);
 }
 
+var datas=new Array();
+var jsondata1="http://114.115.221.206:8088/qtserver/admin/analysis/getProvince";
+$.ajax({
+  url: jsondata1,type:"get", 
+  dataType: "json" ,
+  success: function(data){
+    var stringdata=JSON.stringify(data);
+    var newjson=JSON.parse(stringdata);
+     alert(stringdata);
+    datas[0]=newjson.hresult[3]; datas[1]=newjson.hresult[2]; datas[2]=newjson.hresult[1]; datas[3]=newjson.hresult[0];
+    datas2[0]=newjson.sresult[3]; datas2[1]=newjson.sresult[2]; datas2[2]=newjson.sresult[1]; datas2[3]=newjson.sresult[0];
+   // alert(datas);                            如果在ajax外的话，可能来不及获取，导致值为空
+    //$("#month").trigger("click");              //模拟点击来保证打开时主页有数值
+}
+}); 
 option = {
     title: {
         text: '地理位置',

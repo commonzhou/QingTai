@@ -5,17 +5,18 @@
 }
 .bg{
     width: 12rem; 
-    height:4.60rem;
+    height:5.2rem;
     /*background: red;*/
     /*background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492866726819&di=aa11a79e439bb29df389ae600d0b5252&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F17%2F16%2F41%2F06G58PICfVz_1024.jpg) no-repeat center top;*/
     position: relative;
     top: .6rem;
+   
 }
 .bg img.bgImg{
-    width: 13.8rem; 
-    height:4.6rem;
+    width: 14rem; 
+    height:5.2rem;
     position: absolute;
-    top: 0.3rem;
+    top: 0.1rem;
 }
 div.login_box_01{
     height: 3.01rem;
@@ -24,8 +25,8 @@ div.login_box_01{
     background-color: #fff;
     /*box-shadow: 2rem 2rem transparent;*/
     position: absolute;
-    top: 3.20rem;
-    left: 10.59rem;
+    top: 3.3rem;
+    left: 11.3rem;
     transform: translate(-50%,-50%);
 }
 

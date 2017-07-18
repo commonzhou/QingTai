@@ -1,17 +1,3 @@
-var datas=new Array();
-var jsondata1="http://114.115.221.206:8088/qtserver/admin/accusation/getAccusationDetail";
-$.ajax({
-  url: jsondata1,type:"get", 
-  dataType: "json" ,
-  success: function(data){
-    var stringdata=JSON.stringify(data);
-    var newjson=JSON.parse(stringdata);
-    alert(stringdata);
-   // datas[0]=newjson.result[3]; datas[1]=newjson.result[2]; datas[2]=newjson.result[1]; datas[3]=newjson.result[0];
-   // alert(datas);                            如果在ajax外的话，可能来不及获取，导致值为空
-    //$("#month").trigger("click");              //模拟点击来保证打开时主页有数值
-}
-}); 
 var data = [
         {
             userLogo: 'http://img.qq1234.org/uploads/allimg/141111/3_11111011322592.jpg',
@@ -81,33 +67,22 @@ for(var i = 0; i < data.length;i++){
 
 var mess = document.getElementsByClassName('mess');
 
-for (var j = 0;j < data.length; j++){
-   
-    mess[j].innerHTML = domList[j];
 
-}
-var click_div = $('.div_05 a');
+var click_div = document.getElementsByClassName('div_05');
 for(var i = 0;i<click_div.length;i++){
-    click_div[i].onmouseover = (function(index){
+    click_div[i].onclick = (function(index){
         return function(e){
             e.stopPropagation();
             mess[index].style.left = 5.7 + "rem";
             mess[index].style.top = .45 + "rem";
             mess[index].style.display = 'block';
-            mess[index].style.width=2.94+"rem";
-            mess[index].style.height=4.66+"rem";
     };
 })(i);
-     click_div[i].onclick = (function(index){
-        return function(e){
-        e.stopPropagation();
-        mess[index].style.width=12.93+"rem";
-        mess[index].style.height=10+"rem";
-        mess[index].style.left =0 + "rem";
-        mess[index].style.top = 0 + "rem";
-       // mess[index].style.display = 'block';
-    };
- })(i);
+    // click_div[i].onmouseover = (function(index){
+    //     return function(){
+            
+    //     }
+    // })
 }
 
 var close = document.getElementsByClassName('close');
@@ -121,12 +96,12 @@ for (var i = 0;i<close.length;i++){
 }
 
    
-    // $(".text").bind("click",function(event){
-    //    //alert(this.id);
-    //    window.location.href="file:///D:/git/QingTai/QingTai/report_mess.html#";
-    //    document.getElementById("insert").innerText="aaa";
-    //    event.stopPropagation();
-    // });
+    $(".text").bind("click",function(event){
+       //alert(this.id);
+       window.location.href="file:///D:/git/QingTai/QingTai/report_mess.html#";
+       document.getElementById("insert").innerText="aaa";
+       event.stopPropagation();
+    });
 
 
 

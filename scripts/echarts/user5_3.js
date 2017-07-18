@@ -1,9 +1,37 @@
 var dom = document.getElementById("graph6");
 var myChart = echarts.init(dom);
 var option = null;
-var man=798;                  //60到380
-var woman=898;                 //15到560
+// var man=798;                  //60到380
+// var woman=898;                 //15到560
 var xMax=1000;
+var man;
+var woman;
+var total;
+var manrate;
+var womanrate;
+var sub=document.getElementById("subTitle");
+
+var jsondata1="http://114.115.221.206:8088/qtserver/admin/analysis/getGender";
+$.ajax({
+  url: jsondata1,type:"get", 
+  dataType: "json" ,
+  success: function(data){
+    var stringdata=JSON.stringify(data);
+    var newjson=JSON.parse(stringdata);
+     //alert(stringdata);
+     man=newjson.result[0];
+     woman=newjson.result[1];
+     total=man+woman;
+     sub.innerText="当前用户总量："+total;
+     manrate=100*man/total;
+     manrate=Number(manrate).toFixed(2);
+     womanrate=100*woman/total;
+     womanrate=Number(womanrate).toFixed(2);
+   // alert(datas);                            如果在ajax外的话，可能来不及获取，导致值为空
+    //$("#month").trigger("click");              //模拟点击来保证打开时主页有数值
+
+
+
 option = {
     title:{
       text:"性别比例",
@@ -91,12 +119,22 @@ option = {
             data:[
 	            {
                     value:woman,
+                     label:{
+                        normal:{
+                            offset:[-5,0]
+                        }
+                    },
                     itemStyle:{
                         normal:{color:'#DF2938',
                         barBorderRadius: 5}
                     }
                },{
                     value:man,
+                    label:{
+                        normal:{
+                            offset:[-10,0]
+                        }
+                    },
                     itemStyle:{
                         normal:{color:'#0082D2',
                         barBorderRadius: 5}
@@ -111,13 +149,14 @@ option = {
             symbolOffset:[158.5,0],
              data:[
                 {
-                    value:60,
-                    symbolOffset:[154.5,0],
+                    value:womanrate,
+                    symbolOffset:[144.5,0],
                     itemStyle:{
                         normal:{color:'#DF2938'}
                     }
                },{
-                    value:40,
+                    value:manrate,
+                    symbolOffset:[134.5,0],
                     itemStyle:{
                         normal:{color:'#0082D2'}
                     }
@@ -318,3 +357,5 @@ if(window.navigator.userAgent.indexOf("Chrome") !== -1){   //针对chrome 12px�
 
 
 myChart.setOption(option, true);
+}
+}); 

@@ -1,6 +1,6 @@
 /*举报信息*/
 #container .mess{
-  height: 4.66rem;
+  height:4.66rem;
   width: 2.94rem;
   background: #fff;
   border: 1px solid #DCD5D5;
@@ -31,6 +31,7 @@
   top: -.15rem;
   left: 1.133rem;
   z-index: 111;
+  
 }
 
 /*关闭*/
@@ -124,7 +125,11 @@
 }
 #container .mess .botPart{
   margin: .02rem auto;
-  height: 3.25rem;
+  max-height: 3.18rem;
+  overflow:hidden;
+  white-space:pre-wrap;
+  text-overflow:ellipsis;
+  text-shadow:0px 1px 1px #fff;
   width: 2.8rem;
   line-height: .2rem;
   position: absolute;

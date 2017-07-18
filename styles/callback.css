@@ -1,12 +1,15 @@
 nav ul li a.callback{
     color: #4EC4F1; 
 }
+div.bg{
+  height:5.5rem;
+}
 div.bg_02{
-  height: 4.35rem;
+  height: 4.7rem;
   width: 12.93rem;
   position: absolute;
   left: .36rem;
-  bottom: .73rem;
+  bottom: .50rem;
   background: #fff;
 }
 div.bg_02 .content{
@@ -47,7 +50,7 @@ div.bg_02 .content{
 /*新建ul标签*/
 .bg_02 .content_new{
   width: 12.92rem;
-  height: 4rem;
+  height: 4.4rem;
   overflow-y: scroll;
   /*margin: 0 auto;*/
 }
@@ -93,6 +96,9 @@ div.bg_02 .content{
   text-decoration: none;
   color: black;
 }
+#container .content_new li .div_03 a:hover{
+  color:#1AC217;
+}
 #container .content_new li .div_04{
   margin-left: .7rem;
   width: 1.5rem;
@@ -101,6 +107,7 @@ div.bg_02 .content{
   margin-left: .8rem;
   width: 1.0rem;
 }
+
 #container .content_new li .div_06{
   margin-left: 1.0rem;
   /*width: 5rem;*/
