@@ -15,7 +15,8 @@ var jsondata1="http://114.115.221.206:8088/qtserver/admin/analysis/getGender";
 $.ajax({
   url: jsondata1,type:"get", 
   dataType: "json" ,
-  success: function(data){
+    async:false,       //interesting，false为同步，true异步，异步时有奇怪的bug
+    success: function(data){
     var stringdata=JSON.stringify(data);
     var newjson=JSON.parse(stringdata);
      //alert(stringdata);
@@ -355,7 +356,6 @@ if(window.navigator.userAgent.indexOf("Chrome") !== -1){   //针对chrome 12px�
 
 }
 
-
-myChart.setOption(option, true);
+myChart.setOption(option, false);
 }
 }); 

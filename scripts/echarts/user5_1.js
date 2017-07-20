@@ -6,20 +6,18 @@ function randomData() {
 }
 
 var datas=new Array();
+//var newjson;
 var jsondata1="http://114.115.221.206:8088/qtserver/admin/analysis/getProvince";
-$.ajax({
+ $.ajax({
   url: jsondata1,type:"get", 
+  async:false,             //interesting，false为同步，true异步，异步时有奇怪的bug
   dataType: "json" ,
   success: function(data){
     var stringdata=JSON.stringify(data);
     var newjson=JSON.parse(stringdata);
-     alert(stringdata);
-    datas[0]=newjson.hresult[3]; datas[1]=newjson.hresult[2]; datas[2]=newjson.hresult[1]; datas[3]=newjson.hresult[0];
-    datas2[0]=newjson.sresult[3]; datas2[1]=newjson.sresult[2]; datas2[2]=newjson.sresult[1]; datas2[3]=newjson.sresult[0];
-   // alert(datas);                            如果在ajax外的话，可能来不及获取，导致值为空
-    //$("#month").trigger("click");              //模拟点击来保证打开时主页有数值
-}
-}); 
+    
+     //datas[0]=newjson.result[0];
+
 option = {
     title: {
         text: '地理位置',
@@ -49,7 +47,7 @@ option = {
     },
     visualMap: {                      //数据的映射
         min: 0,
-        max: 1000,
+        max: 100,                    //标尺人数上线修改此处
         left: 20,
         bottom: 40,
         itemHeight:100,
@@ -80,40 +78,40 @@ option = {
             top:"48",
             symbol:"pin",
             data:[
-                {name: '北京',value: randomData(),itemStyle:{normal:{areaColor:"#00D2AA" }} },
-                {name: '天津',value: randomData(),itemStyle:{normal:{areaColor:"#0082D2" }} },
-                {name: '上海',value: randomData(),itemStyle:{normal:{areaColor:"#00AAE1" }} },
-                {name: '重庆',value: randomData(),itemStyle:{normal:{areaColor:"##00D7E1" }} },
-                {name: '河北',value: randomData(),itemStyle:{normal:{areaColor:"#00AAE1" }} },
-                {name: '河南',value: randomData(),itemStyle:{normal:{areaColor:"#00D2AA" }} },
-                {name: '云南',value: randomData(),itemStyle:{normal:{areaColor:"#00D7E1" }} },
-                {name: '辽宁',value: randomData(),itemStyle:{normal:{areaColor:"#00D7E1" }} },
-                {name: '黑龙江',value: randomData(),itemStyle:{normal:{areaColor:"#00AAE1" }} },
-                {name: '湖南',value: randomData(),itemStyle:{normal:{areaColor:"#00AAE1" }} },
-                {name: '安徽',value: randomData(),itemStyle:{normal:{areaColor:"#00D7E1" }}},
-                {name: '山东',value: randomData(),itemStyle:{normal:{areaColor:"#0082D2" }} },
-                {name: '新疆',value: randomData(),itemStyle:{normal:{areaColor:"#0082D2" }}},
-                {name: '江苏',value: randomData(),itemStyle:{normal:{areaColor:"#00AAE1" }} },
-                {name: '浙江',value: randomData(),itemStyle:{normal:{areaColor:"#0082D2" }} },
-                {name: '江西',value: randomData(),itemStyle:{normal:{areaColor:"#00D2AA" }} },
-                {name: '湖北',value: randomData(),itemStyle:{normal:{areaColor:"#0082D2" }} },
-                {name: '广西',value: randomData(),itemStyle:{normal:{areaColor:"#0082D2" }} },
-                {name: '甘肃',value: randomData(),itemStyle:{normal:{areaColor:"#00D2AA" }} },
-                {name: '山西',value: randomData(),itemStyle:{normal:{areaColor:"#00D7E1" }} },
-                {name: '内蒙古',value: randomData(),itemStyle:{normal:{areaColor:"#0082D2" }} },
-                {name: '陕西',value: randomData(),itemStyle:{normal:{areaColor:"#00AAE1" }} },
-                {name: '吉林',value: randomData(),itemStyle:{normal:{areaColor:"#00D2AA" }} },
-                {name: '福建',value: randomData(),itemStyle:{normal:{areaColor:"#00AAE1" }} },
-                {name: '贵州',value: randomData(),itemStyle:{normal:{areaColor:"#00D2AA" }}},
-                {name: '广东',value: randomData(),itemStyle:{normal:{areaColor:"#00D7E1" }} },
-                {name: '青海',value: randomData(),itemStyle:{normal:{areaColor:"#00AAE1" }} },
-                {name: '西藏',value: randomData(),itemStyle:{normal:{areaColor:"#00D2AA" }} },
-                {name: '四川',value: randomData(),itemStyle:{normal:{areaColor:"#0082D2" }} },
-                {name: '宁夏',value: randomData(),itemStyle:{normal:{areaColor:"#00D7E1" }} },
-                {name: '海南',value: randomData(),itemStyle:{normal:{areaColor:"#00D2AA" }} },
-                {name: '台湾',value: randomData(),itemStyle:{normal:{areaColor:"#0082D2" }} },
-                {name: '香港',value: randomData(),itemStyle:{normal:{areaColor:"#0082D2" }} },
-                {name: '澳门',value: randomData(),itemStyle:{normal:{areaColor:"#0082D2" }} }
+                {name: '北京',value: newjson.result[0],itemStyle:{normal:{areaColor:"#00D2AA" }} },
+                {name: '天津',value: newjson.result[13],itemStyle:{normal:{areaColor:"#0082D2" }} },
+                {name: '上海',value: newjson.result[5],itemStyle:{normal:{areaColor:"#00AAE1" }} },
+                {name: '重庆',value: newjson.result[11],itemStyle:{normal:{areaColor:"##00D7E1" }} },
+                {name: '河北',value: newjson.result[6],itemStyle:{normal:{areaColor:"#00AAE1" }} },
+                {name: '河南',value: newjson.result[4],itemStyle:{normal:{areaColor:"#00D2AA" }} },
+                {name: '云南',value: newjson.result[14],itemStyle:{normal:{areaColor:"#00D7E1" }} },
+                {name: '辽宁',value: newjson.result[22],itemStyle:{normal:{areaColor:"#00D7E1" }} },
+                {name: '黑龙江',value: newjson.result[24],itemStyle:{normal:{areaColor:"#00AAE1" }} },
+                {name: '湖南',value: newjson.result[10],itemStyle:{normal:{areaColor:"#00AAE1" }} },
+                {name: '安徽',value: newjson.result[17],itemStyle:{normal:{areaColor:"#00D7E1" }}},
+                {name: '山东',value: newjson.result[2],itemStyle:{normal:{areaColor:"#0082D2" }} },
+                {name: '新疆',value: newjson.result[30],itemStyle:{normal:{areaColor:"#0082D2" }}},
+                {name: '江苏',value: newjson.result[3],itemStyle:{normal:{areaColor:"#00AAE1" }} },
+                {name: '浙江',value: newjson.result[7],itemStyle:{normal:{areaColor:"#0082D2" }} },
+                {name: '江西',value: newjson.result[19],itemStyle:{normal:{areaColor:"#00D2AA" }} },
+                {name: '湖北',value: newjson.result[20],itemStyle:{normal:{areaColor:"#0082D2" }} },
+                {name: '广西',value: newjson.result[16],itemStyle:{normal:{areaColor:"#0082D2" }} },
+                {name: '甘肃',value: newjson.result[28],itemStyle:{normal:{areaColor:"#00D2AA" }} },
+                {name: '山西',value: newjson.result[21],itemStyle:{normal:{areaColor:"#00D7E1" }} },
+                {name: '内蒙古',value: newjson.result[25],itemStyle:{normal:{areaColor:"#0082D2" }} },
+                {name: '陕西',value: newjson.result[9],itemStyle:{normal:{areaColor:"#00AAE1" }} },
+                {name: '吉林',value: newjson.result[32],itemStyle:{normal:{areaColor:"#00D2AA" }} },
+                {name: '福建',value: newjson.result[12],itemStyle:{normal:{areaColor:"#00AAE1" }} },
+                {name: '贵州',value: newjson.result[27],itemStyle:{normal:{areaColor:"#00D2AA" }}},
+                {name: '广东',value: newjson.result[1],itemStyle:{normal:{areaColor:"#00D7E1" }} },
+                {name: '青海',value: newjson.result[29],itemStyle:{normal:{areaColor:"#00AAE1" }} },
+                {name: '西藏',value: newjson.result[31],itemStyle:{normal:{areaColor:"#00D2AA" }} },
+                {name: '四川',value: newjson.result[15],itemStyle:{normal:{areaColor:"#0082D2" }} },
+                {name: '宁夏',value: newjson.result[33],itemStyle:{normal:{areaColor:"#00D7E1" }} },
+                {name: '海南',value: newjson.result[18],itemStyle:{normal:{areaColor:"#00D2AA" }} },
+                {name: '台湾',value: newjson.result[23],itemStyle:{normal:{areaColor:"#0082D2" }} },
+                {name: '香港',value: newjson.result[8],itemStyle:{normal:{areaColor:"#0082D2" }} },
+                {name: '澳门',value: newjson.result[26],itemStyle:{normal:{areaColor:"#0082D2" }} }
             ]
         }
         
@@ -142,5 +140,8 @@ if(window.navigator.userAgent.indexOf("Chrome")== -1){
    option.visualMap.bottom=20;
 }
 if (option && typeof option === "object") {
-    myChart.setOption(option, true);                 //是否不跟之前设置的option进行合并，默认为false，即合并。
+   
+    myChart.setOption(option, false);                 //是否不跟之前设置的option进行合并，默认为false，即合并。
 }
+}
+}); 

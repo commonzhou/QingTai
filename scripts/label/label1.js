@@ -8,7 +8,7 @@ $.ajax({
     var stringdata=JSON.stringify(data);
     var newjson=JSON.parse(stringdata);
      alert(stringdata);
-    datas[0]=newjson.result[0]; datas[1]=newjson.result[1];
+    datas[0]=newjson.time; datas[1]=newjson.content;
     
    // alert(datas);                            如果在ajax外的话，可能来不及获取，导致值为空
     //$("#month").trigger("click");              //模拟点击来保证打开时主页有数值

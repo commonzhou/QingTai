@@ -8,10 +8,11 @@ var jsondata1="http://114.115.221.206:8088/qtserver/admin/analysis/getEducation"
 $.ajax({
   url: jsondata1,type:"get", 
   dataType: "json" ,
+  async:false,
   success: function(data){
     var stringdata=JSON.stringify(data);
     var newjson=JSON.parse(stringdata);
-    // alert(stringdata);
+    //alert(stringdata);
     datas[0]=newjson.result[0]; datas[1]=newjson.result[1]; datas[2]=newjson.result[2]; datas[3]=newjson.result[3];
    // alert(datas);                           // 如果在ajax外的话，可能来不及获取，导致值为空
    // $(".graph5").trigger("hover");              //模拟点击来保证打开时主页有数值
@@ -69,8 +70,8 @@ option={
             center:[123.95,140.9],
             data:[
                 {value:datas[0], name:'本科',itemStyle: {normal: {color: '#00D2AA'}}},
-                {value:310, name:'硕士',itemStyle: {normal: {color: '#FAE863'}}},
-                {value:234, name:'博士',itemStyle: {normal: {color: '#FC9029'}}},
+                {value:datas[1], name:'硕士',itemStyle: {normal: {color: '#FAE863'}}},
+                {value:datas[2], name:'博士',itemStyle: {normal: {color: '#FC9029'}}},
                 {value:datas[3], name:'其他',itemStyle: {normal: {color: '#DF2938'}}}           //获取数据有时延
             ]
         }

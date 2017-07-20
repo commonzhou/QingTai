@@ -134,7 +134,54 @@ $.ajax({
     //$("#month").trigger("click"); 
 }
 }); 
-
+$.ajax({
+    url: jsondata10,type:"post", 
+    dataType: "json" ,
+    data:{
+      year:$("#post1").val(),
+      month:$("#post2").val(),
+      day:$("#post3").val()
+    },
+    success: function(data){
+    var stringdata=JSON.stringify(data);
+    var newjson=JSON.parse(stringdata);
+    alert(stringdata);
+    datas[45]=newjson.result[6]; datas[46]=newjson.result[5]; datas[47]=newjson.result[4]; datas[48]=newjson.result[3]; datas[49]=newjson.result[2];
+    datas[50]=newjson.result[1]; datas[51]=newjson.result[0];
+}
+}); 
+  $.ajax({
+    url: jsondata11,type:"post", 
+    dataType: "json" ,
+    data:{
+      year:$("#post1").val(),
+      month:$("#post2").val(),
+      day:$("#post3").val()
+    },
+    success: function(data){
+    var stringdata=JSON.stringify(data);
+    var newjson=JSON.parse(stringdata);
+    alert(stringdata);
+    datas[52]=newjson.result[6]; datas[53]=newjson.result[5]; datas[54]=newjson.result[4]; datas[55]=newjson.result[3]; datas[56]=newjson.result[2];
+    datas[57]=newjson.result[1]; datas[58]=newjson.result[0];
+}
+}); 
+ $.ajax({
+    url: jsondata12,type:"post", 
+    dataType: "json" ,
+    data:{
+      year:'$("#post1").val()',
+      month:'$("#post2").val()',
+      day:'$("#post3").val()'
+    },
+    success: function(data){
+    var stringdata=JSON.stringify(data);
+    var newjson=JSON.parse(stringdata);
+    alert(stringdata);
+    datas[59]=newjson.result[6]; datas[60]=newjson.result[5]; datas[61]=newjson.result[4]; datas[62]=newjson.result[3]; datas[63]=newjson.result[2];
+    datas[64]=newjson.result[1]; datas[65]=newjson.result[0];
+}
+}); 
 
   //alert(datas);
  // 指定图表的配置项和数据
@@ -306,33 +353,32 @@ $("#month").click(function(){
    myChart.setOption(option); 
 });
 
-$("#query").click(function(){
-    //alert($("#post1").val());                post三请求
-  $.post(jsondata10,{year:$("#post1").val(),month:$("#post2").val(),day:$("#post3").val()},function(data){
-    var stringdata=JSON.stringify(data);
-    var newjson=JSON.parse(stringdata);
-    //alert(stringdata);
-    datas[45]=newjson.result[6]; datas[46]=newjson.result[5]; datas[47]=newjson.result[4]; datas[48]=newjson.result[3]; datas[49]=newjson.result[2];
-    datas[50]=newjson.result[1]; datas[51]=newjson.result[0];
-});
+$("#query").click(function(){    //  post三请求
+    //alert($("#post1").val());              
+//   $.post(jsondata10,{year:$("#post1").val(),month:$("#post2").val(),day:$("#post3").val()},function(data){
+//     var stringdata=JSON.stringify(data);
+//     var newjson=JSON.parse(stringdata);
+//     //alert(stringdata);
+//     datas[45]=newjson.result[6]; datas[46]=newjson.result[5]; datas[47]=newjson.result[4]; datas[48]=newjson.result[3]; datas[49]=newjson.result[2];
+//     datas[50]=newjson.result[1]; datas[51]=newjson.result[0];
+// });
+  
+//   $.post(jsondata11,{year:$("#post1").val(),month:$("#post2").val(),day:$("#post3").val()},function(data){
+//     var stringdata=JSON.stringify(data);
+//     var newjson=JSON.parse(stringdata);
+//     //alert(stringdata);
+//     datas[52]=newjson.result[6]; datas[53]=newjson.result[5]; datas[54]=newjson.result[4]; datas[55]=newjson.result[3]; datas[56]=newjson.result[2];
+//     datas[57]=newjson.result[1]; datas[58]=newjson.result[0];
+// }); 
 
-    //alert($("#post1").val());
-  $.post(jsondata11,{year:$("#post1").val(),month:$("#post2").val(),day:$("#post3").val()},function(data){
-    var stringdata=JSON.stringify(data);
-    var newjson=JSON.parse(stringdata);
-    //alert(stringdata);
-    datas[52]=newjson.result[6]; datas[53]=newjson.result[5]; datas[54]=newjson.result[4]; datas[55]=newjson.result[3]; datas[56]=newjson.result[2];
-    datas[57]=newjson.result[1]; datas[58]=newjson.result[0];
-}); 
-
-    //alert($("#post1").val());
-  $.post(jsondata12,{year:$("#post1").val(),month:$("#post2").val(),day:$("#post3").val()},function(data){
-    var stringdata=JSON.stringify(data);
-    var newjson=JSON.parse(stringdata);
-    //alert(stringdata);
-    datas[59]=newjson.result[6]; datas[60]=newjson.result[5]; datas[61]=newjson.result[4]; datas[62]=newjson.result[3]; datas[63]=newjson.result[2];
-    datas[64]=newjson.result[1]; datas[65]=newjson.result[0];
-});  
+ 
+//   $.post(jsondata12,{year:$("#post1").val(),month:$("#post2").val(),day:$("#post3").val()},function(data){
+//     var stringdata=JSON.stringify(data);
+//     var newjson=JSON.parse(stringdata);
+//     //alert(stringdata);
+//     datas[59]=newjson.result[6]; datas[60]=newjson.result[5]; datas[61]=newjson.result[4]; datas[62]=newjson.result[3]; datas[63]=newjson.result[2];
+//     datas[64]=newjson.result[1]; datas[65]=newjson.result[0];
+// });  
 
    option.xAxis.data=['7-17','7-18','7-19','7-20','7-21','7-22','7-23'];
    option.series[0].data=[datas[45],datas[46],datas[47],datas[48],datas[49],datas[50],datas[51]];
