@@ -38,7 +38,7 @@ div.bg_02 .content{
   margin-left: .63rem;
 }
 .bg_02 .content li.li_04{
-  margin-left: .66rem;
+  margin-left: .69rem;
 }
 .bg_02 .content li.li_05{
   margin-left: 1.82rem;
@@ -74,7 +74,8 @@ div.bg_02 .content{
 }
 .new_li .div_01{
   margin-left: .45rem;
-  width: .6rem;
+  width: .6rem; 
+  height: .597rem;
   position: absolute;
 }
 .new_li .div_01 img.sender{
@@ -90,6 +91,7 @@ div.bg_02 .content{
 .new_li .div_02{
   margin-left: .6rem;
   width: .6rem;
+  height: .597rem;
   position: absolute;
   left: 1.0rem;
 }
@@ -106,10 +108,13 @@ div.bg_02 .content{
 .new_li .div_03{
   margin-left: 2.9rem;
   width: .9rem;
+ 
 }
 .new_li .div_04{
   margin-left: .4rem;
   width: .9rem;
+ 
+
 }
 .new_li .div_05{
   margin-left: .85rem;

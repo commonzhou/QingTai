@@ -14,11 +14,7 @@ var jsondata9="http://114.115.221.206:8088/qtserver/admin/main/getUserNumByDay";
 var jsondata10="http://114.115.221.206:8088/qtserver/admin/main/getRegisterNumByDate";
 var jsondata11="http://114.115.221.206:8088/qtserver/admin/main/getLoginNumByDate";
 var jsondata12="http://114.115.221.206:8088/qtserver/admin/main/getUserNumByDate";
-//$.getJSON(jsondata,function(data){
-    //var stringdata=JSON.stringify(data);
-    //var newjson=JSON.parse(stringdata);
-    //alert(stringdata);
-//}); 
+var newday,newmonth,newyear;
 $.ajax({
   url: jsondata1,type:"get", 
 
@@ -132,54 +128,6 @@ $.ajax({
     datas[42]=newjson.result[2]; datas[43]=newjson.result[1]; datas[44]=newjson.result[0];
    // alert(datas);                            如果在ajax外的话，可能来不及获取，导致值为空
     //$("#month").trigger("click"); 
-}
-}); 
-$.ajax({
-    url: jsondata10,type:"post", 
-    dataType: "json" ,
-    data:{
-      year:$("#post1").val(),
-      month:$("#post2").val(),
-      day:$("#post3").val()
-    },
-    success: function(data){
-    var stringdata=JSON.stringify(data);
-    var newjson=JSON.parse(stringdata);
-    alert(stringdata);
-    datas[45]=newjson.result[6]; datas[46]=newjson.result[5]; datas[47]=newjson.result[4]; datas[48]=newjson.result[3]; datas[49]=newjson.result[2];
-    datas[50]=newjson.result[1]; datas[51]=newjson.result[0];
-}
-}); 
-  $.ajax({
-    url: jsondata11,type:"post", 
-    dataType: "json" ,
-    data:{
-      year:$("#post1").val(),
-      month:$("#post2").val(),
-      day:$("#post3").val()
-    },
-    success: function(data){
-    var stringdata=JSON.stringify(data);
-    var newjson=JSON.parse(stringdata);
-    alert(stringdata);
-    datas[52]=newjson.result[6]; datas[53]=newjson.result[5]; datas[54]=newjson.result[4]; datas[55]=newjson.result[3]; datas[56]=newjson.result[2];
-    datas[57]=newjson.result[1]; datas[58]=newjson.result[0];
-}
-}); 
- $.ajax({
-    url: jsondata12,type:"post", 
-    dataType: "json" ,
-    data:{
-      year:'$("#post1").val()',
-      month:'$("#post2").val()',
-      day:'$("#post3").val()'
-    },
-    success: function(data){
-    var stringdata=JSON.stringify(data);
-    var newjson=JSON.parse(stringdata);
-    alert(stringdata);
-    datas[59]=newjson.result[6]; datas[60]=newjson.result[5]; datas[61]=newjson.result[4]; datas[62]=newjson.result[3]; datas[63]=newjson.result[2];
-    datas[64]=newjson.result[1]; datas[65]=newjson.result[0];
 }
 }); 
 
@@ -354,31 +302,65 @@ $("#month").click(function(){
 });
 
 $("#query").click(function(){    //  post三请求
-    //alert($("#post1").val());              
-//   $.post(jsondata10,{year:$("#post1").val(),month:$("#post2").val(),day:$("#post3").val()},function(data){
-//     var stringdata=JSON.stringify(data);
-//     var newjson=JSON.parse(stringdata);
-//     //alert(stringdata);
-//     datas[45]=newjson.result[6]; datas[46]=newjson.result[5]; datas[47]=newjson.result[4]; datas[48]=newjson.result[3]; datas[49]=newjson.result[2];
-//     datas[50]=newjson.result[1]; datas[51]=newjson.result[0];
-// });
-  
-//   $.post(jsondata11,{year:$("#post1").val(),month:$("#post2").val(),day:$("#post3").val()},function(data){
-//     var stringdata=JSON.stringify(data);
-//     var newjson=JSON.parse(stringdata);
-//     //alert(stringdata);
-//     datas[52]=newjson.result[6]; datas[53]=newjson.result[5]; datas[54]=newjson.result[4]; datas[55]=newjson.result[3]; datas[56]=newjson.result[2];
-//     datas[57]=newjson.result[1]; datas[58]=newjson.result[0];
-// }); 
-
+    newyear=$("#post1").val();
+       if(newyear=="") alert("请输入年份：");
+    newmonth=$("#post2").val();
+       if(newmonth=="") alert("请输入月份：");
+    newday=$("#post3").val();
+       if(newday=="") alert("请输入日期：");
+     
+    $.ajax({
+    url: jsondata10,type:"post", 
+    dataType: "json" ,         //虽然跨域应该是jsonp，但是下面json格式转换报错，只好json
+    crossDomain:true,
+    data:{
+      "year":newyear,
+      'month':newmonth,
+      "day":newday
+    },
+    success: function(data){
+    var stringdata=JSON.stringify(data);
+    var newjson=JSON.parse(stringdata);
+    datas[45]=newjson.result[6]; datas[46]=newjson.result[5]; datas[47]=newjson.result[4]; datas[48]=newjson.result[3]; datas[49]=newjson.result[2];
+    datas[50]=newjson.result[1]; datas[51]=newjson.result[0];
+    $("#query").trigger("click");
+}
+}); 
  
-//   $.post(jsondata12,{year:$("#post1").val(),month:$("#post2").val(),day:$("#post3").val()},function(data){
-//     var stringdata=JSON.stringify(data);
-//     var newjson=JSON.parse(stringdata);
-//     //alert(stringdata);
-//     datas[59]=newjson.result[6]; datas[60]=newjson.result[5]; datas[61]=newjson.result[4]; datas[62]=newjson.result[3]; datas[63]=newjson.result[2];
-//     datas[64]=newjson.result[1]; datas[65]=newjson.result[0];
-// });  
+  $.ajax({
+    url: jsondata11,type:"post", 
+    dataType: "json" ,
+   
+    data:{
+      "year":newyear,
+      "month":newmonth,
+      "day":newday
+    },
+    success: function(data){
+    var stringdata=JSON.stringify(data);
+    var newjson=JSON.parse(stringdata);
+    datas[52]=newjson.result[6]; datas[53]=newjson.result[5]; datas[54]=newjson.result[4]; datas[55]=newjson.result[3]; datas[56]=newjson.result[2];
+    datas[57]=newjson.result[1]; datas[58]=newjson.result[0];
+    
+}
+}); 
+ $.ajax({
+    url: jsondata12,type:"post", 
+    dataType: "json" ,
+    crossDomain:true,
+    data:{
+      "year":newyear,
+      "month":newmonth,
+      "day":newday
+    },
+    success: function(data){
+    var stringdata=JSON.stringify(data);
+    var newjson=JSON.parse(stringdata);
+    //alert(stringdata);
+    datas[59]=newjson.result[6]; datas[60]=newjson.result[5]; datas[61]=newjson.result[4]; datas[62]=newjson.result[3]; datas[63]=newjson.result[2];
+    datas[64]=newjson.result[1]; datas[65]=newjson.result[0];
+}
+}); 
 
    option.xAxis.data=['7-17','7-18','7-19','7-20','7-21','7-22','7-23'];
    option.series[0].data=[datas[45],datas[46],datas[47],datas[48],datas[49],datas[50],datas[51]];

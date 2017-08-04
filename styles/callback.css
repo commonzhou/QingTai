@@ -82,11 +82,11 @@ div.bg_02 .content{
   display: inline-block;
   position: absolute;
   /*top: .1rem;*/
-  left: 0rem;
+  left: 0.1rem;
 }
 #container .content_new li .div_02{
-  margin-left: 2.1rem;
-  width: .6rem;
+  margin-left: 2.05rem;
+  width: .6rem; 
 }
 #container .content_new li .div_03{
   margin-left: 1.0rem;

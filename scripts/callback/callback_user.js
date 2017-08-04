@@ -1,18 +1,22 @@
-var datas=new Array();
-var jsondata1="http://114.115.221.206:8088/qtserver/admin/feedback/getUserInfo";
-$.ajax({
-  url: jsondata1,type:"get", 
 
-  dataType: "json" ,
+var datas=new Array();
+var jsondata3="http://114.115.221.206:8088/qtserver/admin/feedback/getUserInfo";
+$.ajax({
+  url: jsondata3,
+  type:"post", 
+  dataType: "jsonp" ,
+  crossDomain:true,
+  data:{
+      "userId":15
+  },
   success: function(data){
-    var stringdata=JSON.stringify(data);
-    var newjson=JSON.parse(stringdata);
-    alert(stringdata);
+    // var stringdata=JSON.stringify(data);
+    // var newjson1=JSON.parse(stringdata);
+    alert(data);
    // datas[0]=newjson.result[3]; datas[1]=newjson.result[2]; datas[2]=newjson.result[1]; datas[3]=newjson.result[0];
    // alert(datas);                            如果在ajax外的话，可能来不及获取，导致值为空
     //$("#month").trigger("click");              //模拟点击来保证打开时主页有数值
-}
-}); 
+
 var data = [
         {
             avator: 'http://v1.qzone.cc/avatar/201408/03/23/44/53de58e5da74c247.jpg%21200x200.jpg',
@@ -104,25 +108,10 @@ for(var i = 0; i < data.length;i++){
     + '</ul></div></div>';
    intro[i].innerHTML = dom;
 }
+}
+}); 
 
 
-// 反馈用户
-// var click_div = document.getElementsByClassName('div_01');
-// var intro = document.getElementsByClassName('intro');
-// for(var j=0; j<click_div.length; j++){
-//     click_div[j].onmousemove = (function(index){
-//         return function(){
-//             intro[index].style.left = 8 + "rem";
-//             intro[index].style.top = -3 + "rem";
-//         };
-//     })(j);  
-//     click_div[j].onmouseout = (function(index){
-//         return function(){
-//             intro[index].style.left = -999 + "rem";
-//             intro[index].style.top = -3 + "rem";
-//         }
-//     })(j);  
-// }
 
 
 

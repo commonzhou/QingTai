@@ -7,7 +7,7 @@ $.ajax({
   success: function(data){
     var stringdata=JSON.stringify(data);
     var newjson=JSON.parse(stringdata);
-     alert(stringdata);
+     //alert(stringdata);
     datas[0]=newjson.time; datas[1]=newjson.content;
     
    // alert(datas);                            如果在ajax外的话，可能来不及获取，导致值为空
