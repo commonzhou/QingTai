@@ -1,18 +1,20 @@
-@media screen and(min-device-width:160rem){
-   body{
-    height: 62.8rem;
-    width: 136.6rem;
-    margin: 0 auto;
+@media screen and(min-device-width:160rem) {
+    body {
+        height: 62.8rem;
+        width: 136.6rem;
+        margin: 0 auto;
+    }
 }
+
+div.bg div.choice ul li.user_02 {
+    background: #59C8F2;
 }
-div.bg div.choice ul li.user_02{
-    background: #59C8F2 ;
-}
-div.bg div.choice ul li.user_02 a{
+
+div.bg div.choice ul li.user_02 a {
     color: #fff;
 }
 
-div.bg div.top{
+div.bg div.top {
     height: 43.5rem;
     width: 101rem;
     background: #fff;
@@ -20,56 +22,67 @@ div.bg div.top{
     left: 31.9rem;
     bottom: 7rem;
 }
-div.bg div.top ul#header{
-	height: 4.25rem;
+
+div.bg div.top ul#header {
+    height: 4.25rem;
     width: 101rem;
     border-bottom: 0.1rem solid #DDD5D5;
     margin: 0;
 }
-div.bg div.top ul#header li{
-	list-style: none;
-	float:left;
+
+div.bg div.top ul#header li {
+    list-style: none;
+    float: left;
     font-family: PingFangSC-Regular;
     font-size: 1.6rem;
     color: #747779;
     margin-top: 1.3rem;
-    margin-bottom: 0.75rem;  
-    height:2.2rem;  
+    margin-bottom: 0.75rem;
+    height: 2.2rem;
 }
-div.bg div.top ul#header li#header1{
-	width:5.2rem;
+
+div.bg div.top ul#header li#header1 {
+    width: 5.2rem;
     margin-left: 2.6rem;
-    margin-right:27rem;
+    margin-right: 27rem;
 }
-div.bg div.top ul#header li#header2{
-	width:3.2rem;
+
+div.bg div.top ul#header li#header2 {
+    width: 3.2rem;
     margin-left: 0rem;
     margin-right: 41.8rem;
 }
-div.bg div.top ul#header li#header3{
-	  width:4.8rem;
+
+div.bg div.top ul#header li#header3 {
+    width: 4.8rem;
     margin-left: 0rem;
 }
-div.bg div.top ul#content{
-  	height: 39.05rem;
+
+div.bg div.top ul#content {
+    height: 39.05rem;
     width: 101rem;
     margin: 0;
 }
-div.bg div.top ul#content li.content{
+
+div.bg div.top ul#content li.content {
     height: 5.1rem;
     width: 101rem;
     margin: 0;
     border-bottom: 0.1px solid #F3EFEF;
-    list-style: none; 
-}  
-div.bg div.top ul#content li.content ul li{
-	list-style: none;
-    float:left;
+    list-style: none;
 }
+
+div.bg div.top ul#content li.content ul li {
+    list-style: none;
+    float: left;
+}
+
+
 /*************************第一行的例子********************************/
-div.bg div.top ul#content li.content ul li.rank1{
-    width:2.52rem;
-    height:2.01rem;
+
+div.bg div.top ul#content li.content ul li.rank1 {
+    width: 2.52rem;
+    height: 2.01rem;
     margin-left: 3.8rem;
     margin-top: 1.5rem;
     background: #F95502;
@@ -79,9 +92,10 @@ div.bg div.top ul#content li.content ul li.rank1{
     color: #FFFFFF;
     text-align: center;
 }
-div.bg div.top ul#content li.content ul li.rank2{
-    width:2.52rem;
-    height:2.01rem;
+
+div.bg div.top ul#content li.content ul li.rank2 {
+    width: 2.52rem;
+    height: 2.01rem;
     margin-left: 3.8rem;
     margin-top: 1.5rem;
     background: #F77939;
@@ -91,9 +105,10 @@ div.bg div.top ul#content li.content ul li.rank2{
     color: #FFFFFF;
     text-align: center;
 }
-div.bg div.top ul#content li.content ul li.rank3{
-    width:2.52rem;
-    height:2.01rem;
+
+div.bg div.top ul#content li.content ul li.rank3 {
+    width: 2.52rem;
+    height: 2.01rem;
     margin-left: 3.8rem;
     margin-top: 1.5rem;
     background: #F7A47A;
@@ -103,9 +118,10 @@ div.bg div.top ul#content li.content ul li.rank3{
     color: #FFFFFF;
     text-align: center;
 }
-div.bg div.top ul#content li.content ul li.rank4{
-    width:2.52rem;
-    height:2.01rem;
+
+div.bg div.top ul#content li.content ul li.rank4 {
+    width: 2.52rem;
+    height: 2.01rem;
     margin-left: 3.8rem;
     margin-top: 1.5rem;
     font-family: PingFangSC-Regular;
@@ -113,10 +129,11 @@ div.bg div.top ul#content li.content ul li.rank4{
     color: #747779;
     text-align: center;
 }
-div.bg div.top ul#content li.content ul li.label1{
-    width:4.98rem;
-    height:1.96rem;
-    margin-left: 6.08rem;
+
+div.bg div.top ul#content li.content ul li.label1 {
+    width: 6.6rem;
+    height: 1.96rem;
+    margin-left: 2rem;
     margin-top: 1.5rem;
     opacity: 0.59;
     background: #0C84FC;
@@ -124,51 +141,55 @@ div.bg div.top ul#content li.content ul li.label1{
     font-size: 1.3rem;
     color: #FFFFFF;
     text-align: center;
-    padding:0.08rem 0 0.08rem 0;
-}
-div.bg div.top ul#content li.content ul li.label2{
-    width:4.98rem;
-    height:1.96rem;
-    margin-left: 1.24rem;
-    margin-top: 1.5rem;
-    opacity: 0.59;
-    background: #0C84FC;
-    font-family: PingFangSC-Regular;
-    font-size: 1.3rem;
-    color: #FFFFFF;
-    text-align: center;
-    padding:0.08rem 0 0.08rem 0;
+    padding: 0.08rem 0 0.08rem 0;
 }
 
-div.bg div.top ul#content li.content ul li.name{
-    width:22rem;
-    height:2.2rem;
+div.bg div.top ul#content li.content ul li.label2 {
+    width: 5.6rem;
+    height: 1.96rem;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    opacity: 0.59;
+    background: #0C84FC;
+    font-family: PingFangSC-Regular;
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0.08rem 0 0.08rem 0;
+}
+
+div.bg div.top ul#content li.content ul li.name {
+    width: 22rem;
+    height: 2.2rem;
     margin-left: 1.2rem;
     margin-top: 1.5rem;
     font-family: PingFangSC-Regular;
     font-size: 1.6rem;
-    color:  #747779;
-    text-align: center;
+    color: #747779;
+    /*text-align: center;        此处不居中，左对齐吧*/
 }
-div.bg div.top ul#content li.content ul li.image{
-    width:4rem;
-    height:4rem;
+
+div.bg div.top ul#content li.content ul li.image {
+    width: 4rem;
+    height: 4rem;
     margin-left: 33.5rem;
     margin-top: 0.55rem;
 }
-div.bg div.top ul#content li.content ul li.nickname{
-    width:8rem;
-    height:2rem;
+
+div.bg div.top ul#content li.content ul li.nickname {
+    width: 8rem;
+    height: 2rem;
     margin-left: 1.8rem;
     margin-top: 1.55rem;
     font-family: PingFangSC-Regular;
     font-size: 1.4rem;
-    color:  #747779;
+    color: #747779;
     text-align: left;
 }
-div.bg div.top ul#content li.content ul li.image2{
-    width:4rem;
-    height:4rem;
+
+div.bg div.top ul#content li.content ul li.image2 {
+    width: 4rem;
+    height: 4rem;
     margin-left: 27.3rem;
     margin-top: 0.55rem;
 }

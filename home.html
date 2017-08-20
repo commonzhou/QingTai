@@ -1,98 +1,101 @@
 <!DOCTYPE>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>青苔可视化编辑器</title>
-		<meta name="author" content="administer" />
-		<meta name="viewport" content="initial-scale=1,width=device-width" />
-    	<style>
-			nav ul li a.home{
-				color: #4EC4F1; 
-			}
-		</style>
-        <script type="text/javascript" src="scripts/adjust.js"></script> 
-        <script type="text/javascript" src="scripts/jquery.js"></script>    
-		<link rel="stylesheet" type="text/css" href="styles/home.css">
-    
 
-	
-		<!-- Date: 2017-01-5 -->
-		
-	</head>
-	<body>
-		<nav><!--导航链接-->
-			<ul>
-				<li><a href="home.html" class="home">主页</a></li>
-				<li><a href="user.html">用户分析</a></li>
-				<li><a href="report.html">举报</a></li>
-				<li><a href="callback.html">反馈</a></li>
-			</ul>
-		</nav>  
-		<div class="bg">
-			
-			<div class="help">
-				<div id="title">
-					后台编辑器功能介绍
-				</div>
-				<div id="content">
-					1.查看用户分析<br />
-                    a)查看发求助帖和分享帖数量（日/周/月）<br />
-                    b)查看20篇热帖（不考虑时间因素）<br />
-                    c)查看搜索方式搜帖/搜用户的使用频次（日/周/月）<br />
-                    d)查看本周和上周最热的九个标签（搜索标签和发帖选用标签总和）<br />
-                    e)查看各个学历分布人数<br />
-                    f)查看用户地理位置分布<br />
-                    2.推送系统消息<br />
-                    3.查看用户反馈信息<br />
-                    4.查看用户举报信息
-				</div>	
-             </div> 
-            <div class="user">
-            	<div id="graph1">
-            	</div>
-            	<div id="toolbox">
-            		<div id="choseNum">
-            			数据范围
-            		</div>
-            		<div id="month">
-            			月
-            		</div>
-            		<div id="week">
-            			周
-            		</div>
-            		<div id="date">
-            			日
-            		</div>
-            		<div id="choseDate">
-            			指定日期查询
-            		</div>
-            		
-            		<div id="year" class="queryDate">
-            			<input id="post1" type="text" placeholder="2017">
-            		</div>
-            		<div id="nian" class="queryDate">年
-            		</div>
-            		<div id="mon" class="queryDate">
-            			<input id="post2" type="text" placeholder="7">
-            		</div>
-            		<div id="yue" class="queryDate">月
-            		</div>
-            		<div id="day" class="queryDate">
-            			<input id="post3" type="text" placeholder="11">
-            		</div>
-            		<div id="ri" class="queryDate">日
-            		</div>
-            		
-            		<div id="query">
-            			查询
-            		</div>
-            	</div>
-			</div> 
-			
-		</div>
-		<script src="scripts/echarts/echarts.js"></script>
-        <script src="scripts/echarts/homegraph.js"></script>
-	</body>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>青苔可视化编辑器</title>
+    <meta name="author" content="administer" />
+    <meta name="viewport" content="initial-scale=1,width=device-width" />
+    <style>
+        nav ul li a.home {
+            color: #4EC4F1;
+        }
+    </style>
+    <script type="text/javascript" src="scripts/adjust.js"></script>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/moment.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/home.css">
+
+
+
+    <!-- Date: 2017-01-5 -->
+
+</head>
+
+<body>
+    <nav>
+        <!--导航链接-->
+        <ul>
+            <li><a href="home.html" class="home">主页</a></li>
+            <li><a href="user.html">用户分析</a></li>
+            <li><a href="report.html">举报</a></li>
+            <li><a href="callback.html">反馈</a></li>
+        </ul>
+    </nav>
+    <div class="bg">
+
+        <div class="help">
+            <div id="title">
+                后台编辑器功能介绍
+            </div>
+            <div id="content">
+                1.查看用户分析<br /> a)查看发求助帖和分享帖数量（日/周/月）
+                <br /> b)查看20篇热帖（不考虑时间因素）
+                <br /> c)查看搜索方式搜帖/搜用户的使用频次（日/周/月）
+                <br /> d)查看本周和上周最热的九个标签（搜索标签和发帖选用标签总和）
+                <br /> e)查看各个学历分布人数
+                <br /> f)查看用户地理位置分布
+                <br /> 2.推送系统消息
+                <br /> 3.查看用户反馈信息
+                <br /> 4.查看用户举报信息
+            </div>
+        </div>
+        <div class="user">
+            <div id="graph1">
+            </div>
+            <div id="toolbox">
+                <div id="choseNum">
+                    数据范围
+                </div>
+                <div id="month">
+                    月
+                </div>
+                <div id="week">
+                    周
+                </div>
+                <div id="date">
+                    日
+                </div>
+                <div id="choseDate">
+                    指定日期查询
+                </div>
+
+                <div id="year" class="queryDate">
+                    <input id="post1" type="text" placeholder="2017">
+                </div>
+                <div id="nian" class="queryDate">年
+                </div>
+                <div id="mon" class="queryDate">
+                    <input id="post2" type="text" placeholder="7">
+                </div>
+                <div id="yue" class="queryDate">月
+                </div>
+                <div id="day" class="queryDate">
+                    <input id="post3" type="text" placeholder="11">
+                </div>
+                <div id="ri" class="queryDate">日
+                </div>
+
+                <div id="query">
+                    查询
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="scripts/echarts/echarts.js"></script>
+    <script src="scripts/echarts/homegraph.js"></script>
+</body>
+
 </html>
-
