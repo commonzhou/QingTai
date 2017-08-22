@@ -10,8 +10,19 @@ $.ajax({
     dataType: "json",
     success: function(data) {
         var stringdata = JSON.stringify(data);
-        var newjson = JSON.parse(stringdata);
+        var oldjson = JSON.parse(stringdata);
+        var newjson1 = new Array();
+        var newjson2 = new Array();
+        var newjson = new Array();
 
+        for (var k = 0; k < oldjson.length; k++) {
+            if (oldjson[k].flag == 0) {
+                newjson1.push(oldjson[k]);
+            } else {
+                newjson2.push(oldjson[k]);
+            }
+        }
+        newjson = newjson1.concat(newjson2);
         var  domList = '';
         var domListChuli = "";
         var  dom;
@@ -59,7 +70,7 @@ $.ajax({
             }
         }
         var  ul  =  document.getElementById('content_new');
-        //domList = domList + domListChuli;
+        domList = domList + domListChuli;
         ul.innerHTML  =  domList;
 
         var btn = document.getElementsByClassName('btn');
