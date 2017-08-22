@@ -13,6 +13,7 @@ $.ajax({
         var newjson = JSON.parse(stringdata);
 
         var  domList = '';
+        var domListChuli = "";
         var  dom;
         for (var i = 0; i < newjson.length; i++) {
 
@@ -49,10 +50,16 @@ $.ajax({
                     newjson[i].reason = "未知";
             }
             newjson[i].time = newjson[i].time.split(" ")[0];
-            dom  =  '<li class="new_li">'  +         '<div class="div_01"><img class="sender" src="' + newjson[i].savator + '"/><div class="intro"></div></div>'  +         '<div class="div_02"><img class="receiver" src="' + newjson[i].ravator + '"/><div class="intro"></div></div>'  +         '<div class="div_03">'  +  newjson[i].type  +  '</div>'  +         '<div class="div_04">'  +  newjson[i].reason  +  '</div>'  +         '<div class="div_05"><a class="point" href="#">' + "查看" + '</a><div class="mess"></div></div>'  +         '<div class="div_06">' + newjson[i].time + '</div>'  +         '<div class="div_07"><select>'  +         '<option selected="selected">不处理</option>'  +         '<option>不处理</option>'  +         '<option>警告</option>'  +         '<option>禁言一天</option>'  +         '<option>禁言一周</option>'  +         '<option>禁言一天</option>'  +         '<option>封号</option>'  +         '</select></div>'  +         '<div class="div_08"><button class="btn">确定</button></div>'  +         '</li>';
-            domList  +=  dom;
+            if (newjson[i].flag == 0) {
+                dom  =  '<li class="new_li">'  +         '<div class="div_01"><img class="sender" src="' + newjson[i].savator + '"/><div class="intro"></div></div>'  +         '<div class="div_02"><img class="receiver" src="' + newjson[i].ravator + '"/><div class="intro"></div></div>'  +         '<div class="div_03">'  +  newjson[i].type  +  '</div>'  +         '<div class="div_04">'  +  newjson[i].reason  +  '</div>'  +         '<div class="div_05"><a class="point" href="#">' + "查看" + '</a><div class="mess"></div></div>'  +         '<div class="div_06">' + newjson[i].time + '</div>'  +         '<div class="div_07"><select>'  +         '<option selected="selected">不处理</option>'  +         '<option>不处理</option>'  +         '<option>警告</option>'  +         '<option>禁言一天</option>'  +         '<option>禁言一周</option>'  +         '<option>禁言一天</option>'  +         '<option>封号</option>'  +         '</select></div>'  +         '<div class="div_08"><button class="btn">确定</button></div>'  +         '</li>';
+                domList  +=  dom;
+            } else {
+                dom  =  '<li class="new_li">'  +         '<div class="div_01"><img class="sender" src="' + newjson[i].savator + '"/><div class="intro"></div></div>'  +         '<div class="div_02"><img class="receiver" src="' + newjson[i].ravator + '"/><div class="intro"></div></div>'  +         '<div class="div_03">'  +  newjson[i].type  +  '</div>'  +         '<div class="div_04">'  +  newjson[i].reason  +  '</div>'  +         '<div class="div_05"><a class="point" href="#">' + "查看" + '</a><div class="mess"></div></div>'  +         '<div class="div_06">' + newjson[i].time + '</div>'  +         '<div class="div_07"><select>'  +         '<option selected="selected">不处理</option>'  +         '<option>不处理</option>'  +         '<option>警告</option>'  +         '<option>禁言一天</option>'  +         '<option>禁言一周</option>'  +         '<option>禁言一天</option>'  +         '<option>封号</option>'  +         '</select></div>'  +         '<div class="div_08"><button class="btn2">已处理</button></div>'  +         '</li>';
+                domListChuli +=  dom;
+            }
         }
         var  ul  =  document.getElementById('content_new');
+        //domList = domList + domListChuli;
         ul.innerHTML  =  domList;
 
         var btn = document.getElementsByClassName('btn');
@@ -408,10 +415,7 @@ $.ajax({
                                 '<div class="time">' + newjson2.object.time + '</div>' +
                                 '</div><div class="botPart">介绍：' + newjson2.object.content + '</div>';
                         }
-                        //click = '<div class="text">回复详情</div>';
-                        //domList.push(dom);
-                        // clickList.push(click);
-                        //}
+
                         if (newjson2.type == 0) {
                             dom =
                                 '<div class="topPart"><div class="text" id=' + i + '>帖子</div><div class="close"></div></div>' +

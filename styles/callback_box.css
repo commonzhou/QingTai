@@ -80,7 +80,7 @@
     margin: 0 auto;
     position: absolute;
     border: 1px solid #979797;
-    top: .465rem;
+    top: 0.7rem;
     left: .15rem;
     z-index: 111;
     background: #7FD4CF;
@@ -88,7 +88,7 @@
 
 #container .box .midPart img.bPic {
     width: 2.62rem;
-    height: 1.62rem;
+    height: 3rem;
     margin: 0 auto;
     position: absolute;
     border: 1px solid #979797;
@@ -106,7 +106,7 @@
     position: absolute;
     left: .03rem;
     text-align: left;
-    top: 2.05rem;
+    top: 0.45rem;
     padding-left: .25rem;
     color: #747779;
     font-size: .14rem;

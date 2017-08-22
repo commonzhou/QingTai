@@ -1,172 +1,199 @@
-nav ul li a.report{
-    color: #4EC4F1; 
+nav ul li a.report {
+    color: #4EC4F1;
 }
-div.bg{
-  height:5.5rem;
+
+div.bg {
+    height: 5.5rem;
 }
-div.bg_02{
-  height: 4.7rem;
-  width: 12.93rem;
-  position: absolute;
-  left: .36rem;
-  bottom: .50rem;
-  background: #fff;
+
+div.bg_02 {
+    height: 4.7rem;
+    width: 12.93rem;
+    position: absolute;
+    left: .36rem;
+    bottom: .50rem;
+    background: #fff;
 }
-div.bg_02 .content{
-  height: .455rem;
-  width: 12.93rem;
-  font-size: 0;
-  margin: 0 auto;
-  border-bottom: 1px solid #DDD5D5;
+
+div.bg_02 .content {
+    height: .455rem;
+    width: 12.93rem;
+    font-size: 0;
+    margin: 0 auto;
+    border-bottom: 1px solid #DDD5D5;
 }
-.bg_02 .content li{
-  list-style: none;
-  font-size: .16rem;
-  display: inline-block;
-  height: .4rem;
-  line-height: .4rem;
-  text-align: center;
-  color: #747779;
+
+.bg_02 .content li {
+    list-style: none;
+    font-size: .16rem;
+    display: inline-block;
+    height: .4rem;
+    line-height: .4rem;
+    text-align: center;
+    color: #747779;
 }
-.bg_02 .content li.li_01{
-  margin-left: .4rem;
+
+.bg_02 .content li.li_01 {
+    margin-left: .4rem;
 }
-.bg_02 .content li.li_02{
-  margin-left: .52rem;
+
+.bg_02 .content li.li_02 {
+    margin-left: .52rem;
 }
-.bg_02 .content li.li_03{
-  margin-left: .63rem;
+
+.bg_02 .content li.li_03 {
+    margin-left: .63rem;
 }
-.bg_02 .content li.li_04{
-  margin-left: .69rem;
+
+.bg_02 .content li.li_04 {
+    margin-left: .69rem;
 }
-.bg_02 .content li.li_05{
-  margin-left: 1.82rem;
+
+.bg_02 .content li.li_05 {
+    margin-left: 1.82rem;
 }
-.bg_02 .content li.li_06{
-  margin-left: 1.76rem;
+
+.bg_02 .content li.li_06 {
+    margin-left: 1.76rem;
 }
-.bg_02 .content li.li_07{
-  margin-left: 1.1rem;
+
+.bg_02 .content li.li_07 {
+    margin-left: 1.1rem;
 }
+
 
 /*新建ul标签*/
-.bg_02 .content_new{
-  width: 12.92rem;
-  height:4.4rem;
-  /*margin: 0 auto;*/
-}
-.new_li{
-  list-style: none;
-  font-size: 0;
-  height: .71rem;
-  line-height: .71rem;
-  width: 12.92rem;
-  /*background: red;*/
-  border-bottom: 1px solid #F3EFEF;
-  position: relative;
-}
-.new_li div{
-  font-size: .14rem;
-  color: #747779;
-  display: inline-block;
-  text-align: center;
-}
-.new_li .div_01{
-  margin-left: .45rem;
-  width: .6rem; 
-  height: .597rem;
-  position: absolute;
-}
-.new_li .div_01 img.sender{
-  width: .597rem;
-  height: .597rem;
-  border-radius: 50%;
-  /*background: aquamarine;*/
-  display: inline-block;
-  position: absolute;
-  top: .05rem;
-  left: 0rem;
-}
-.new_li .div_02{
-  margin-left: .6rem;
-  width: .6rem;
-  height: .597rem;
-  position: absolute;
-  left: 1.0rem;
-}
-.new_li .div_02 img.receiver{
-  width: .597rem;
-  height: .597rem;
-  border-radius: 50%;
-  /*background: aquamarine;*/
-  display: inline-block;
-  position: absolute;
-  top: .05rem;
-  left: 0rem;
-}
-.new_li .div_03{
-  margin-left: 2.9rem;
-  width: .9rem;
- 
-}
-.new_li .div_04{
-  margin-left: .4rem;
-  width: .9rem;
- 
 
-}
-.new_li .div_05{
-  margin-left: .85rem;
-  width: 2.3rem;
-}
-.new_li .div_05 a.point{
-  text-decoration: none;
-  color: black
-}
-.new_li .div_05 a:hover{
-  color:#1AC217;
-}
-.new_li .div_06{
-  margin-left: .75rem;
-  width: 1.0rem;
-}
-.new_li .div_07{
-  margin-left: .6rem;
-  width: 1.0rem;
-}
-.new_li .div_07 select{
-  width: .84rem;
-  height: .32rem;
-  border: 1px solid #B7B4B4;
-
-}
-.new_li .div_08{
-  margin-left: .4rem;
-  width: .8rem;
-}
-.new_li .div_08 .btn{
-  height: .24rem;
-  width: .6rem;
-  background: #1AC217; 
-  color: #fff;
-  border-radius: .04rem;
-}
-/*.new_li img{
-  height: 50px;
-  width: 50px;
-  position: relative;
-  top: 15px;
-}*/
-.new_li div select{
-  height: 0.3rem;
-  width: 0.7rem;
-  /*border: 1px solid aquamarine;*/
-}
-.content_new{
-  height: 4.4rem;
-  width: 0.36rem;
-  overflow-y: scroll;
+.bg_02 .content_new {
+    width: 12.92rem;
+    height: 4.4rem;
+    /*margin: 0 auto;*/
 }
 
+.new_li {
+    list-style: none;
+    font-size: 0;
+    height: .71rem;
+    line-height: .71rem;
+    width: 12.92rem;
+    /*background: red;*/
+    border-bottom: 1px solid #F3EFEF;
+    position: relative;
+}
 
+.new_li div {
+    font-size: .14rem;
+    color: #747779;
+    display: inline-block;
+    text-align: center;
+}
+
+.new_li .div_01 {
+    margin-left: .45rem;
+    width: .6rem;
+    height: .597rem;
+    position: absolute;
+}
+
+.new_li .div_01 img.sender {
+    width: .597rem;
+    height: .597rem;
+    border-radius: 50%;
+    /*background: aquamarine;*/
+    display: inline-block;
+    position: absolute;
+    top: .05rem;
+    left: 0rem;
+}
+
+.new_li .div_02 {
+    margin-left: .6rem;
+    width: .6rem;
+    height: .597rem;
+    position: absolute;
+    left: 1.0rem;
+}
+
+.new_li .div_02 img.receiver {
+    width: .597rem;
+    height: .597rem;
+    border-radius: 50%;
+    /*background: aquamarine;*/
+    display: inline-block;
+    position: absolute;
+    top: .05rem;
+    left: 0rem;
+}
+
+.new_li .div_03 {
+    margin-left: 2.9rem;
+    width: .9rem;
+}
+
+.new_li .div_04 {
+    margin-left: .4rem;
+    width: .9rem;
+}
+
+.new_li .div_05 {
+    margin-left: .85rem;
+    width: 2.3rem;
+}
+
+.new_li .div_05 a.point {
+    text-decoration: none;
+    color: black
+}
+
+.new_li .div_05 a:hover {
+    color: #1AC217;
+}
+
+.new_li .div_06 {
+    margin-left: .75rem;
+    width: 1.0rem;
+}
+
+.new_li .div_07 {
+    margin-left: .6rem;
+    width: 1.0rem;
+}
+
+.new_li .div_07 select {
+    width: .84rem;
+    height: .32rem;
+    border: 1px solid #B7B4B4;
+}
+
+.new_li .div_08 {
+    margin-left: .4rem;
+    width: .8rem;
+}
+
+.new_li .div_08 .btn {
+    height: .24rem;
+    width: .6rem;
+    background: #1AC217;
+    color: #fff;
+    border-radius: .04rem;
+}
+
+.new_li .div_08 .btn2 {
+    height: .24rem;
+    width: .6rem;
+    background: #a1a1a1;
+    color: #fff;
+    border-radius: .04rem;
+}
+
+.new_li div select {
+    height: 0.3rem;
+    width: 0.7rem;
+    /*border: 1px solid aquamarine;*/
+}
+
+.content_new {
+    height: 4.4rem;
+    width: 0.36rem;
+    overflow-y: scroll;
+}

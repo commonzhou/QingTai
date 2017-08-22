@@ -11,18 +11,36 @@ $.ajax({ //对反馈基本信息的请求
         var stringdata = JSON.stringify(data);
         var newjson = JSON.parse(stringdata);
         var  domList = '';
+        var domListChuli = "";
         var  dom;
+        var id1 = new Array();
+        var id2 = new Array();
+        var idConcat = new Array();
+        var content1 = new Array();
+        var content2 = new Array();
+        var contentSum = new Array();
         for (var i = 0; i < newjson.length; i++) {
             if (newjson[i].contact == "") {
                 newjson[i].contact = "无"
             }
             newjson[i].time = newjson[i].time.split(" ")[0];
-            dom  =  '<li>'  +         '<div class="div_01"><img class="nickName" src="' + newjson[i].avator + '"/><div class="intro"></div></div>'  +         '<div class="div_02">'  +  newjson[i].gender  +  '</div>'  +         '<div class="div_03" id="div_03"><a class="contentAll" href="#">'  + "查看" +  '</a><div class="box" id="box"></div></div>'  +         '<div class="div_04">' + newjson[i].contact + ' </div>'  +         '<div class="div_05">' + newjson[i].time + '</div>'  +         '<div class="div_06">'  + "" + '</div>'  +         '<div class="div_07"><button class="btn">确定</button></div>'  +         '</li>';
-            domList  +=  dom;
+            if (newjson[i].flag == 0) {
+                dom  =  '<li>'  +         '<div class="div_01"><img class="nickName" src="' + newjson[i].avator + '"/><div class="intro"></div></div>'  +         '<div class="div_02">'  +  newjson[i].gender  +  '</div>'  +         '<div class="div_03" id="div_03"><a class="contentAll" href="#">'  + "查看" +  '</a><div class="box" id="box"></div></div>'  +         '<div class="div_04">' + newjson[i].contact + ' </div>'  +         '<div class="div_05">' + newjson[i].time + '</div>'  +         '<div class="div_06">'  + "" + '</div>'  +         '<div class="div_07"><button class="btn">确定</button></div>'  +         '</li>';
+                domList  +=  dom;
+                id1.push(newjson[i].userId);
+                content1.push(newjson[i].id);
+            } else {
+                dom  =  '<li>'  +         '<div class="div_01"><img class="nickName" src="' + newjson[i].avator + '"/><div class="intro"></div></div>'  +         '<div class="div_02">'  +  newjson[i].gender  +  '</div>'  +         '<div class="div_03" id="div_03"><a class="contentAll" href="#">'  + "查看" +  '</a><div class="box" id="box"></div></div>'  +         '<div class="div_04">' + newjson[i].contact + ' </div>'  +         '<div class="div_05">' + newjson[i].time + '</div>'  +         '<div class="div_06_2">'  + "" + '</div>'  +         '<div class="div_07"><button class="btn2">已查看</button></div>'  +         '</li>';
+                domListChuli +=  dom;
+                id2.push(newjson[i].userId);
+                content2.push(newjson[i].id);
+            }
         }
+        domList = domList + domListChuli;
         var  ul  =  document.getElementById('content_new');
         ul.innerHTML  =  domList;
-
+        idConcat = id1.concat(id2);
+        contentSum = content1.concat(content2);
         var btn = document.getElementsByClassName('btn');
         var div_06 = document.getElementsByClassName('div_06');
         var img = document.getElementsByTagName("img");
@@ -36,7 +54,7 @@ $.ajax({ //对反馈基本信息的请求
                     btn[index].innerHTML = "已查看";
                     // alert(newjson[index].id);
                     ////
-                    var ids = newjson[index].id;
+                    var ids = contentSum[index];
                     $.ajax({
                         url: jsondata2,
                         type: "post",
@@ -67,7 +85,7 @@ $.ajax({ //对反馈基本信息的请求
                     type: "post",
                     dataType: "json",
                     data: {
-                        "userId": newjson[i].userId
+                        "userId": idConcat[i]
                     },
                     success: function(data) {
                         var stringdata1 = JSON.stringify(data);
@@ -84,6 +102,7 @@ $.ajax({ //对反馈基本信息的请求
                             education: '本科',
                             location: '陕西 西安'
                         }]
+
                         dom =
                             '<div class="top">' +
                             '<div class="logo"><img class="avator" src="' + newjson1.avator + '"/></div>' +
@@ -94,6 +113,8 @@ $.ajax({ //对反馈基本信息的请求
                             '<li>学历：' + newjson1.education + '</li>' +
                             '<li>所在地：' + newjson1.location + '</li>' +
                             '</ul></div></div>';
+
+
                         intro[i].innerHTML = dom;
 
                     }
@@ -110,7 +131,7 @@ $.ajax({ //对反馈基本信息的请求
                     type: "post",
                     dataType: "json",
                     data: {
-                        "id": newjson[i].id
+                        "id": contentSum[i]
                     },
                     success: function(data) {
                         var stringdata1 = JSON.stringify(data);
@@ -125,12 +146,16 @@ $.ajax({ //对反馈基本信息的请求
                         var domList = [];
                         var dom;
                         //for (var i = 0; i < data.length; i++) {
-                        dom = '<div class="topPart"><div class="text">反馈详情</div><div class="close"></div></div>' +
-                            '<div class="midPart"><img class="bPic" src="' + data1[i].backPic + '"/></div>' +
-                            '<div class="botPart">' + newjson1.content + '</div></div>'
-                            //domList.push(dom);
-                            //}
-
+                        if (newjson1.image != 1) {
+                            dom = '<div class="topPart"><div class="text">反馈详情</div><div class="close"></div></div>' +
+                                '<div class="midPart"><img class="bPic" src="' + newjson1.image + '"/></div>' +
+                                '<div class="botPart">' + newjson1.content + '</div></div>'
+                                //domList.push(dom);
+                                //}
+                        } else {
+                            dom = '<div class="topPart"><div class="text">反馈详情</div><div class="close"></div></div>' +
+                                '<div class="botPart">' + newjson1.content + '</div></div>'
+                        }
                         var box = document.getElementsByClassName('box');
                         // for (var j = 0; j < data.length; j++) {
                         box[i].innerHTML  = dom;
